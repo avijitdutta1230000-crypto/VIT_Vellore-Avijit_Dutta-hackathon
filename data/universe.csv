@@ -1,0 +1,16 @@
+ticker,company_name,sector,aliases
+AAPL,Apple Inc.,Information Technology,Apple|iPhone
+MSFT,Microsoft Corp.,Information Technology,Microsoft|Azure
+AMD,Advanced Micro Devices,Information Technology,AMD|Advanced Micro Devices
+INTC,Intel Corp.,Information Technology,Intel
+GOOG,Alphabet Inc.,Communication Services,Alphabet|Google|YouTube
+META,Meta Platforms,Communication Services,Meta|Meta Platforms|Facebook|Instagram
+NFLX,Netflix Inc.,Communication Services,Netflix
+DIS,Walt Disney Co.,Communication Services,Disney|Walt Disney
+AMZN,Amazon.com Inc.,Consumer Discretionary,Amazon|AWS
+TSLA,Tesla Inc.,Consumer Discretionary,Tesla
+PG,Procter & Gamble,Consumer Staples,Procter & Gamble|P&G
+KO,Coca-Cola Co.,Consumer Staples,Coca-Cola|Coca Cola
+COST,Costco Wholesale,Consumer Staples,Costco
+BA,Boeing Co.,Industrials,Boeing
+PYPL,PayPal Holdings,Financials,PayPal|Venmo
