@@ -1,7 +1,7 @@
 # RiskPulse: AI/NLP Financial Risk Engine - S&P Global & Crisil Campus Hackathon
 
 **Candidate Name:** Avijit Dutta
-**College Email ID:** [your_id@vitstudent.ac.in]
+**College Email ID:** [avijit.dutta2023@vitstudent.ac.in]
 **College / Campus:** Vellore Institute of Technology (VIT), Vellore
 **Demo Video Link:** [YouTube unlisted link]
 **Slide Deck Link (if hosted externally):** Not hosted externally, see [docs/presentation.pdf](docs/presentation.pdf)
@@ -95,7 +95,7 @@ All data is public or synthetic. No real client or confidential data is used.
 
 ## 4. Quickstart & Installation
 
-**Runtime:** Python [3.x, run `python --version`] on Windows 11 (Git Bash). Should also work on Linux and macOS.
+**Runtime:** Python [3.x, run `python 3.14.3`] on Windows 11 (Git Bash). Should also work on Linux and macOS.
 
 ```bash
 git clone https://github.com/avijitdutta1230000-crypto/VIT_Vellore-Avijit_Dutta-hackathon.git
@@ -177,7 +177,7 @@ To repeat the fine-tuning itself, upload `notebooks/finetune_finbert.ipynb` to K
 
 ## 7. AI Assistance
 
-[Describe honestly how you used AI tools, for example: "An AI assistant (Claude) was used to help draft and debug code and documentation. All design decisions, runs, results and their interpretation were reviewed by me."]
+An AI assistant (Claude) was used to help draft and debug code and documentation. All design decisions, runs, results and their interpretation were reviewed and understood by me.
 
 ## License
 
