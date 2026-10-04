@@ -4,40 +4,27 @@ Source: "Stock Tweets for Sentiment Analysis and Prediction" (Kaggle, equinxx).
 The tweets are historical (2021-09-30 to 2022-09-29), so they are replayed
 in time order to simulate a live social media feed.
 
+Data-quality fix: in the raw file, the same ~4,080 tweets (mostly about Amazon)
+are copied under MSFT, PG and AMZN. So a tweet is kept for a stock only if it
+actually mentions that company (name, alias or cashtag) - the same
+entity-linking rule we use for news headlines.
+
 Run from the repo root:  python -m src.ingestion.tweets
 """
 import hashlib
-import re
 from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[2]
+from src.ingestion.common import COLUMNS, ROOT, clean_text, company_filters, load_universe
+
 TWEETS_CSV = ROOT / "data" / "raw" / "stock_tweets.csv"
-UNIVERSE_CSV = ROOT / "data" / "universe.csv"
-
-# Every ingestion source (tweets, NewsAPI, GDELT) returns these same columns.
-COLUMNS = ["id", "source", "timestamp", "ticker", "text", "url"]
-
-URL_RE = re.compile(r"https?://\S+")
-SPACE_RE = re.compile(r"\s+")
-
-
-def clean_text(text):
-    """Remove links and extra whitespace. Cashtags and hashtags are kept."""
-    text = URL_RE.sub("", str(text))
-    return SPACE_RE.sub(" ", text).strip()
 
 
 def make_id(ticker, timestamp, text):
     """Stable ID, so the same tweet always gets the same ID across runs."""
     raw = f"{ticker}|{timestamp}|{text}".encode("utf-8")
     return "tw_" + hashlib.sha1(raw).hexdigest()[:12]
-
-
-def load_universe(path=UNIVERSE_CSV):
-    """Return the list of tickers in our mock index."""
-    return pd.read_csv(path)["ticker"].tolist()
 
 
 def load_tweets(path=TWEETS_CSV, tickers=None, start=None, end=None, verbose=False):
@@ -50,9 +37,12 @@ def load_tweets(path=TWEETS_CSV, tickers=None, start=None, end=None, verbose=Fal
 
     df = df.rename(columns={"Date": "timestamp", "Tweet": "raw_text", "Stock Name": "ticker"})
 
-    if tickers is None:
-        tickers = load_universe()
-    df = df[df["ticker"].isin(tickers)].copy()
+    universe = load_universe()
+    if tickers is not None:
+        universe = universe[universe["ticker"].isin(tickers)]
+    filters = company_filters(universe)
+
+    df = df[df["ticker"].isin(filters)].copy()
     n_universe = len(df)
 
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
@@ -64,6 +54,12 @@ def load_tweets(path=TWEETS_CSV, tickers=None, start=None, end=None, verbose=Fal
     df["text"] = df["raw_text"].map(clean_text)
     df = df[df["text"].str.len() > 0]
 
+    # Entity linking: keep the tweet only if it mentions the company it is filed under.
+    mentions = [filters[t].search(x) is not None for t, x in zip(df["ticker"], df["text"])]
+    n_before_mention = len(df)
+    df = df[mentions]
+    n_no_mention = n_before_mention - len(df)
+
     # The same text posted repeatedly about the same stock is usually spam or bots.
     # Sort first so we keep the earliest copy of each duplicate.
     df = df.sort_values("timestamp")
@@ -73,14 +69,14 @@ def load_tweets(path=TWEETS_CSV, tickers=None, start=None, end=None, verbose=Fal
     df["source"] = "tweets"
     df["url"] = None
     df["id"] = [make_id(t, ts, x) for t, ts, x in zip(df["ticker"], df["timestamp"], df["text"])]
-
     df = df[COLUMNS].reset_index(drop=True)
 
     if verbose:
-        print(f"Raw tweets in file:          {n_raw:,}")
-        print(f"In our stock universe:        {n_universe:,}")
-        print(f"Duplicates removed:          {n_before_dedupe - len(df):,}")
-        print(f"Final tweets:                {len(df):,}")
+        print(f"Raw tweets in file:                {n_raw:,}")
+        print(f"Filed under our universe:          {n_universe:,}")
+        print(f"Dropped, company not mentioned:    {n_no_mention:,}")
+        print(f"Dropped, duplicate spam:           {n_before_dedupe - len(df):,}")
+        print(f"Final tweets:                      {len(df):,}")
 
     return df
 

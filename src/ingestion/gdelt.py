@@ -24,10 +24,9 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-from src.ingestion.tweets import COLUMNS, clean_text
+from src.ingestion.common import (COLUMNS, ROOT, build_mention_filter, clean_text,
+                                  company_filters, load_universe)
 
-ROOT = Path(__file__).resolve().parents[2]
-UNIVERSE_CSV = ROOT / "data" / "universe.csv"
 CACHE_FILE = ROOT / "data" / "raw" / "gdelt.jsonl"
 API_URL = "https://api.gdeltproject.org/api/v2/doc/doc"
 
@@ -76,24 +75,6 @@ def build_company_query(aliases, company_name):
     if len(terms) > 1:
         names = f"({names})"  # GDELT only allows brackets around OR'd terms
     return f"{names} {FINANCE_TERMS}"
-
-
-def build_headline_filter(terms):
-    """Regex that matches any of the terms as a whole word in a headline.
-
-    Short terms with capitals (AMD, AWS, P&G, Meta, Fed, CPI) are case-sensitive,
-    so "meta" or "fed up" don't count. Longer terms ignore case and allow a
-    plural ending ("tariff" also matches "tariffs").
-    """
-    parts = []
-    for term in terms:
-        term = term.strip()
-        escaped = re.escape(term)
-        if len(term) <= 4 and any(c.isupper() for c in term):
-            parts.append(rf"(?<![A-Za-z0-9]){escaped}(?![A-Za-z0-9])")
-        else:
-            parts.append(rf"(?i:(?<![A-Za-z0-9]){escaped}(?:s|es)?(?![A-Za-z0-9]))")
-    return re.compile("|".join(parts))
 
 
 def fetch_query(query, timespan):
@@ -147,15 +128,24 @@ def articles_to_rows(articles, ticker, headline_filter):
 
 def build_jobs():
     """One job per query: (ticker, GDELT query, headline filter)."""
-    universe = pd.read_csv(UNIVERSE_CSV)
-    jobs = []
-    for r in universe.itertuples():
-        headline_terms = r.aliases.split("|") + [r.company_name.split()[0]]
-        jobs.append((r.ticker, build_company_query(r.aliases, r.company_name),
-                     build_headline_filter(headline_terms)))
+    universe = load_universe()
+    filters = company_filters(universe)
+    jobs = [(r.ticker, build_company_query(r.aliases, r.company_name), filters[r.ticker])
+            for r in universe.itertuples()]
     for query, terms in MARKET_QUERIES:
-        jobs.append(("MARKET", query, build_headline_filter(terms)))
+        jobs.append(("MARKET", query, build_mention_filter(terms)))
     return jobs
+
+
+def recheck_headlines(df):
+    """Re-apply the current headline filters to cached rows, so old cache entries
+    follow the same entity-linking rules as new ones."""
+    if df.empty:
+        return df
+    filters = company_filters()
+    filters["MARKET"] = build_mention_filter([t for _, terms in MARKET_QUERIES for t in terms])
+    keep = [t in filters and filters[t].search(x) is not None for t, x in zip(df["ticker"], df["text"])]
+    return df[keep].reset_index(drop=True)
 
 
 def run_jobs(jobs, timespan):
@@ -203,7 +193,7 @@ def load_gdelt(path=CACHE_FILE):
         return pd.DataFrame(columns=COLUMNS)
     df = pd.read_json(path, lines=True, dtype=False, convert_dates=False)
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
-    return df[COLUMNS]
+    return recheck_headlines(df[COLUMNS])
 
 
 def update_cache(new_df, path=CACHE_FILE):

@@ -1,0 +1,66 @@
+{
+  "period": [
+    "2021-10-04",
+    "2022-09-29"
+  ],
+  "trading_days": 250,
+  "stocks": [
+    "AAPL",
+    "MSFT",
+    "AMD",
+    "INTC",
+    "GOOG",
+    "META",
+    "NFLX",
+    "DIS",
+    "AMZN",
+    "TSLA",
+    "CRM",
+    "KO",
+    "COST",
+    "BA",
+    "PYPL"
+  ],
+  "settings": {
+    "sensitivity": 3.0,
+    "half_life_days": 3,
+    "shrink_texts": 5,
+    "min_weight": 0.02,
+    "max_weight": 0.15,
+    "cost_bps": 10,
+    "signal": "impact_weighted_sentiment"
+  },
+  "sentiment_tilted": {
+    "total_return": -0.3266,
+    "annual_return": -0.3288,
+    "annual_volatility": 0.3291,
+    "sharpe_ratio": -1.046,
+    "max_drawdown": -0.393
+  },
+  "equal_weight": {
+    "total_return": -0.3207,
+    "annual_return": -0.3228,
+    "annual_volatility": 0.3284,
+    "sharpe_ratio": -1.022,
+    "max_drawdown": -0.3863
+  },
+  "information_ratio": -0.749,
+  "avg_daily_turnover": 0.0367,
+  "robustness_excess_annual_return": {
+    "half-life 1d": {
+      "sensitivity 1": -0.0034,
+      "sensitivity 3": -0.01,
+      "sensitivity 5": -0.0183
+    },
+    "half-life 3d": {
+      "sensitivity 1": -0.002,
+      "sensitivity 3": -0.006,
+      "sensitivity 5": -0.0096
+    },
+    "half-life 7d": {
+      "sensitivity 1": -0.0016,
+      "sensitivity 3": -0.0049,
+      "sensitivity 5": -0.0082
+    }
+  }
+}

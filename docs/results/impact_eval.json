@@ -1,0 +1,26 @@
+{
+  "stock_days": 3028,
+  "spearman_impact_vs_same_day_move": 0.085,
+  "spearman_impact_vs_next_day_move": 0.052,
+  "spearman_text_count_vs_same_day_move": 0.059,
+  "by_impact_bucket": [
+    {
+      "impact_bucket": "low (1-3)",
+      "stock_days": 2307,
+      "move_same_day": 0.96,
+      "move_next_day": 0.98
+    },
+    {
+      "impact_bucket": "medium (4-6)",
+      "stock_days": 672,
+      "move_same_day": 1.07,
+      "move_next_day": 1.07
+    },
+    {
+      "impact_bucket": "high (7-10)",
+      "stock_days": 49,
+      "move_same_day": 2.86,
+      "move_next_day": 1.46
+    }
+  ]
+}

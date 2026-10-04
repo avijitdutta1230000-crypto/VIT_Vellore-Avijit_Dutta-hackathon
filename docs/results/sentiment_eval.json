@@ -1,0 +1,29 @@
+{
+  "model": "ProsusAI/finbert",
+  "dataset": "zeroshot/twitter-financial-news-sentiment (validation)",
+  "n_samples": 2388,
+  "accuracy": 0.7253,
+  "macro_f1": 0.6683,
+  "baseline_majority_class": "neutral",
+  "baseline_accuracy": 0.6558,
+  "per_class": {
+    "negative": {
+      "precision": 0.493,
+      "recall": 0.761,
+      "f1": 0.599,
+      "support": 347
+    },
+    "neutral": {
+      "precision": 0.853,
+      "recall": 0.756,
+      "f1": 0.802,
+      "support": 1566
+    },
+    "positive": {
+      "precision": 0.611,
+      "recall": 0.598,
+      "f1": 0.604,
+      "support": 475
+    }
+  }
+}

@@ -1,3 +1,10 @@
 pandas
-datasets
 requests
+datasets
+torch
+transformers
+scikit-learn
+fastapi
+uvicorn
+streamlit
+altair
