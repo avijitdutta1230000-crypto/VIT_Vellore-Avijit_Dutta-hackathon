@@ -33,22 +33,22 @@ FX Forward,-1800000.0,ST-001,FX-01,Long EUR / short USD,position
 FX Forward,-1125000.0,ST-001,FX-02,Long JPY / short USD,position
 Credit Default Swap,75938.0,ST-001,CDS-01,BA,position
 Credit Default Swap,-202500.0,ST-001,CDS-02,CDX IG index,position
-Corporate Bond,-8268750.0,ST-002,,,asset_class
-Corporate Loan,-3420562.0,ST-002,,,asset_class
+Corporate Bond,0.0,ST-002,,,asset_class
+Corporate Loan,0.0,ST-002,,,asset_class
 Credit Default Swap,0.0,ST-002,,,asset_class
-Equity,-2475000.0,ST-002,,,asset_class
+Equity,-1316250.0,ST-002,,,asset_class
 FX Forward,0.0,ST-002,,,asset_class
 Government Bond,0.0,ST-002,,,asset_class
 Interest Rate Swap,0.0,ST-002,,,asset_class
 Equity,0.0,ST-002,EQ-01,AAPL,position
 Equity,0.0,ST-002,EQ-02,MSFT,position
 Equity,0.0,ST-002,EQ-03,TSLA,position
-Equity,-2475000.0,ST-002,EQ-04,DIS,position
+Equity,0.0,ST-002,EQ-04,DIS,position
 Equity,0.0,ST-002,EQ-05,BA,position
-Equity,0.0,ST-002,EQ-06,NFLX,position
+Equity,-1316250.0,ST-002,EQ-06,NFLX,position
 Corporate Bond,-0.0,ST-002,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-002,CB-02,MSFT,position
-Corporate Bond,-8268750.0,ST-002,CB-03,DIS,position
+Corporate Bond,-0.0,ST-002,CB-03,DIS,position
 Corporate Bond,-0.0,ST-002,CB-04,BA,position
 Corporate Bond,-0.0,ST-002,CB-05,INTC,position
 Corporate Bond,-0.0,ST-002,CB-06,PYPL,position
@@ -57,7 +57,7 @@ Government Bond,-0.0,ST-002,GB-01,US Treasury 2Y,position
 Government Bond,-0.0,ST-002,GB-02,US Treasury 10Y,position
 Government Bond,-0.0,ST-002,GB-03,US Treasury 30Y,position
 Corporate Loan,-0.0,ST-002,LN-01,BA,position
-Corporate Loan,-3420562.0,ST-002,LN-02,DIS,position
+Corporate Loan,-0.0,ST-002,LN-02,DIS,position
 Corporate Loan,-0.0,ST-002,LN-03,Harbor Freight Lines,position
 Corporate Loan,-0.0,ST-002,LN-04,Northgate Retail,position
 Corporate Loan,-0.0,ST-002,LN-05,Meridian Chemicals,position
@@ -67,22 +67,22 @@ FX Forward,-0.0,ST-002,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-002,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-002,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-002,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-003,,,asset_class
-Corporate Loan,0.0,ST-003,,,asset_class
+Corporate Bond,-8268750.0,ST-003,,,asset_class
+Corporate Loan,-3420562.0,ST-003,,,asset_class
 Credit Default Swap,0.0,ST-003,,,asset_class
-Equity,-2400000.0,ST-003,,,asset_class
+Equity,-2475000.0,ST-003,,,asset_class
 FX Forward,0.0,ST-003,,,asset_class
 Government Bond,0.0,ST-003,,,asset_class
 Interest Rate Swap,0.0,ST-003,,,asset_class
 Equity,0.0,ST-003,EQ-01,AAPL,position
 Equity,0.0,ST-003,EQ-02,MSFT,position
-Equity,-2400000.0,ST-003,EQ-03,TSLA,position
-Equity,0.0,ST-003,EQ-04,DIS,position
+Equity,0.0,ST-003,EQ-03,TSLA,position
+Equity,-2475000.0,ST-003,EQ-04,DIS,position
 Equity,0.0,ST-003,EQ-05,BA,position
 Equity,0.0,ST-003,EQ-06,NFLX,position
 Corporate Bond,-0.0,ST-003,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-003,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-003,CB-03,DIS,position
+Corporate Bond,-8268750.0,ST-003,CB-03,DIS,position
 Corporate Bond,-0.0,ST-003,CB-04,BA,position
 Corporate Bond,-0.0,ST-003,CB-05,INTC,position
 Corporate Bond,-0.0,ST-003,CB-06,PYPL,position
@@ -91,7 +91,7 @@ Government Bond,-0.0,ST-003,GB-01,US Treasury 2Y,position
 Government Bond,-0.0,ST-003,GB-02,US Treasury 10Y,position
 Government Bond,-0.0,ST-003,GB-03,US Treasury 30Y,position
 Corporate Loan,-0.0,ST-003,LN-01,BA,position
-Corporate Loan,-0.0,ST-003,LN-02,DIS,position
+Corporate Loan,-3420562.0,ST-003,LN-02,DIS,position
 Corporate Loan,-0.0,ST-003,LN-03,Harbor Freight Lines,position
 Corporate Loan,-0.0,ST-003,LN-04,Northgate Retail,position
 Corporate Loan,-0.0,ST-003,LN-05,Meridian Chemicals,position
@@ -101,20 +101,20 @@ FX Forward,-0.0,ST-003,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-003,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-003,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-003,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-004,,,asset_class
+Corporate Bond,-7800000.0,ST-004,,,asset_class
 Corporate Loan,0.0,ST-004,,,asset_class
 Credit Default Swap,0.0,ST-004,,,asset_class
-Equity,-1170000.0,ST-004,,,asset_class
+Equity,-3600000.0,ST-004,,,asset_class
 FX Forward,0.0,ST-004,,,asset_class
 Government Bond,0.0,ST-004,,,asset_class
 Interest Rate Swap,0.0,ST-004,,,asset_class
-Equity,0.0,ST-004,EQ-01,AAPL,position
+Equity,-3600000.0,ST-004,EQ-01,AAPL,position
 Equity,0.0,ST-004,EQ-02,MSFT,position
 Equity,0.0,ST-004,EQ-03,TSLA,position
 Equity,0.0,ST-004,EQ-04,DIS,position
 Equity,0.0,ST-004,EQ-05,BA,position
-Equity,-1170000.0,ST-004,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-004,CB-01,AAPL,position
+Equity,0.0,ST-004,EQ-06,NFLX,position
+Corporate Bond,-7800000.0,ST-004,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-004,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-004,CB-03,DIS,position
 Corporate Bond,-0.0,ST-004,CB-04,BA,position
@@ -305,20 +305,20 @@ FX Forward,-600000.0,ST-009,FX-01,Long EUR / short USD,position
 FX Forward,-375000.0,ST-009,FX-02,Long JPY / short USD,position
 Credit Default Swap,168750.0,ST-009,CDS-01,BA,position
 Credit Default Swap,-450000.0,ST-009,CDS-02,CDX IG index,position
-Corporate Bond,-3900000.0,ST-010,,,asset_class
+Corporate Bond,0.0,ST-010,,,asset_class
 Corporate Loan,0.0,ST-010,,,asset_class
 Credit Default Swap,0.0,ST-010,,,asset_class
-Equity,-2700000.0,ST-010,,,asset_class
+Equity,-1170000.0,ST-010,,,asset_class
 FX Forward,0.0,ST-010,,,asset_class
 Government Bond,0.0,ST-010,,,asset_class
 Interest Rate Swap,0.0,ST-010,,,asset_class
-Equity,-2700000.0,ST-010,EQ-01,AAPL,position
+Equity,0.0,ST-010,EQ-01,AAPL,position
 Equity,0.0,ST-010,EQ-02,MSFT,position
 Equity,0.0,ST-010,EQ-03,TSLA,position
 Equity,0.0,ST-010,EQ-04,DIS,position
 Equity,0.0,ST-010,EQ-05,BA,position
-Equity,0.0,ST-010,EQ-06,NFLX,position
-Corporate Bond,-3900000.0,ST-010,CB-01,AAPL,position
+Equity,-1170000.0,ST-010,EQ-06,NFLX,position
+Corporate Bond,-0.0,ST-010,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-010,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-010,CB-03,DIS,position
 Corporate Bond,-0.0,ST-010,CB-04,BA,position
@@ -339,16 +339,16 @@ FX Forward,-0.0,ST-010,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-010,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-010,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-010,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-011,,,asset_class
+Corporate Bond,-1350000.0,ST-011,,,asset_class
 Corporate Loan,0.0,ST-011,,,asset_class
 Credit Default Swap,0.0,ST-011,,,asset_class
-Equity,-3200000.0,ST-011,,,asset_class
+Equity,0.0,ST-011,,,asset_class
 FX Forward,0.0,ST-011,,,asset_class
 Government Bond,0.0,ST-011,,,asset_class
 Interest Rate Swap,0.0,ST-011,,,asset_class
 Equity,0.0,ST-011,EQ-01,AAPL,position
 Equity,0.0,ST-011,EQ-02,MSFT,position
-Equity,-3200000.0,ST-011,EQ-03,TSLA,position
+Equity,0.0,ST-011,EQ-03,TSLA,position
 Equity,0.0,ST-011,EQ-04,DIS,position
 Equity,0.0,ST-011,EQ-05,BA,position
 Equity,0.0,ST-011,EQ-06,NFLX,position
@@ -357,7 +357,7 @@ Corporate Bond,-0.0,ST-011,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-011,CB-03,DIS,position
 Corporate Bond,-0.0,ST-011,CB-04,BA,position
 Corporate Bond,-0.0,ST-011,CB-05,INTC,position
-Corporate Bond,-0.0,ST-011,CB-06,PYPL,position
+Corporate Bond,-1350000.0,ST-011,CB-06,PYPL,position
 Corporate Bond,-0.0,ST-011,CB-07,Meridian Chemicals,position
 Government Bond,-0.0,ST-011,GB-01,US Treasury 2Y,position
 Government Bond,-0.0,ST-011,GB-02,US Treasury 10Y,position
@@ -376,16 +376,16 @@ Credit Default Swap,-0.0,ST-011,CDS-02,CDX IG index,position
 Corporate Bond,0.0,ST-012,,,asset_class
 Corporate Loan,0.0,ST-012,,,asset_class
 Credit Default Swap,0.0,ST-012,,,asset_class
-Equity,-1170000.0,ST-012,,,asset_class
+Equity,-2800000.0,ST-012,,,asset_class
 FX Forward,0.0,ST-012,,,asset_class
 Government Bond,0.0,ST-012,,,asset_class
 Interest Rate Swap,0.0,ST-012,,,asset_class
 Equity,0.0,ST-012,EQ-01,AAPL,position
 Equity,0.0,ST-012,EQ-02,MSFT,position
-Equity,0.0,ST-012,EQ-03,TSLA,position
+Equity,-2800000.0,ST-012,EQ-03,TSLA,position
 Equity,0.0,ST-012,EQ-04,DIS,position
 Equity,0.0,ST-012,EQ-05,BA,position
-Equity,-1170000.0,ST-012,EQ-06,NFLX,position
+Equity,0.0,ST-012,EQ-06,NFLX,position
 Corporate Bond,-0.0,ST-012,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-012,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-012,CB-03,DIS,position
@@ -407,210 +407,210 @@ FX Forward,-0.0,ST-012,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-012,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-012,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-012,CDS-02,CDX IG index,position
-Corporate Bond,-1350000.0,ST-013,,,asset_class
-Corporate Loan,0.0,ST-013,,,asset_class
-Credit Default Swap,0.0,ST-013,,,asset_class
-Equity,0.0,ST-013,,,asset_class
-FX Forward,0.0,ST-013,,,asset_class
-Government Bond,0.0,ST-013,,,asset_class
-Interest Rate Swap,0.0,ST-013,,,asset_class
-Equity,0.0,ST-013,EQ-01,AAPL,position
-Equity,0.0,ST-013,EQ-02,MSFT,position
-Equity,0.0,ST-013,EQ-03,TSLA,position
-Equity,0.0,ST-013,EQ-04,DIS,position
-Equity,0.0,ST-013,EQ-05,BA,position
-Equity,0.0,ST-013,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-013,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-013,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-013,CB-03,DIS,position
-Corporate Bond,-0.0,ST-013,CB-04,BA,position
-Corporate Bond,-0.0,ST-013,CB-05,INTC,position
-Corporate Bond,-1350000.0,ST-013,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-013,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-013,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-013,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-013,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-013,LN-01,BA,position
-Corporate Loan,-0.0,ST-013,LN-02,DIS,position
-Corporate Loan,-0.0,ST-013,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-013,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-013,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-013,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-013,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-013,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-013,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-013,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-013,CDS-02,CDX IG index,position
-Corporate Bond,-4200000.0,ST-014,,,asset_class
-Corporate Loan,0.0,ST-014,,,asset_class
-Credit Default Swap,0.0,ST-014,,,asset_class
-Equity,-2165625.0,ST-014,,,asset_class
-FX Forward,0.0,ST-014,,,asset_class
-Government Bond,0.0,ST-014,,,asset_class
-Interest Rate Swap,0.0,ST-014,,,asset_class
-Equity,0.0,ST-014,EQ-01,AAPL,position
-Equity,-2165625.0,ST-014,EQ-02,MSFT,position
-Equity,0.0,ST-014,EQ-03,TSLA,position
-Equity,0.0,ST-014,EQ-04,DIS,position
-Equity,0.0,ST-014,EQ-05,BA,position
-Equity,0.0,ST-014,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-014,CB-01,AAPL,position
-Corporate Bond,-4200000.0,ST-014,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-014,CB-03,DIS,position
-Corporate Bond,-0.0,ST-014,CB-04,BA,position
-Corporate Bond,-0.0,ST-014,CB-05,INTC,position
-Corporate Bond,-0.0,ST-014,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-014,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-014,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-014,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-014,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-014,LN-01,BA,position
-Corporate Loan,-0.0,ST-014,LN-02,DIS,position
-Corporate Loan,-0.0,ST-014,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-014,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-014,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-014,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-014,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-014,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-014,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-014,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-014,CDS-02,CDX IG index,position
-Corporate Bond,-4331250.0,ST-015,,,asset_class
-Corporate Loan,-3291750.0,ST-015,,,asset_class
-Credit Default Swap,3543750.0,ST-015,,,asset_class
-Equity,-1960000.0,ST-015,,,asset_class
-FX Forward,0.0,ST-015,,,asset_class
-Government Bond,0.0,ST-015,,,asset_class
-Interest Rate Swap,0.0,ST-015,,,asset_class
-Equity,0.0,ST-015,EQ-01,AAPL,position
-Equity,0.0,ST-015,EQ-02,MSFT,position
-Equity,0.0,ST-015,EQ-03,TSLA,position
-Equity,0.0,ST-015,EQ-04,DIS,position
-Equity,-1960000.0,ST-015,EQ-05,BA,position
-Equity,0.0,ST-015,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-015,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-015,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-015,CB-03,DIS,position
-Corporate Bond,-4331250.0,ST-015,CB-04,BA,position
-Corporate Bond,-0.0,ST-015,CB-05,INTC,position
-Corporate Bond,-0.0,ST-015,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-015,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-015,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-015,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-015,GB-03,US Treasury 30Y,position
-Corporate Loan,-3291750.0,ST-015,LN-01,BA,position
-Corporate Loan,-0.0,ST-015,LN-02,DIS,position
-Corporate Loan,-0.0,ST-015,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-015,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-015,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-015,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-015,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-015,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-015,FX-02,Long JPY / short USD,position
-Credit Default Swap,3543750.0,ST-015,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-015,CDS-02,CDX IG index,position
-Corporate Bond,-12829689.0,ST-016,,,asset_class
-Corporate Loan,-1109938.0,ST-016,,,asset_class
+Corporate Bond,-12829689.0,ST-013,,,asset_class
+Corporate Loan,-1109938.0,ST-013,,,asset_class
+Credit Default Swap,-246094.0,ST-013,,,asset_class
+Equity,-1760938.0,ST-013,,,asset_class
+FX Forward,-853125.0,ST-013,,,asset_class
+Government Bond,-21026250.0,ST-013,,,asset_class
+Interest Rate Swap,-525000.0,ST-013,,,asset_class
+Equity,-393750.0,ST-013,EQ-01,AAPL,position
+Equity,-360938.0,ST-013,EQ-02,MSFT,position
+Equity,-350000.0,ST-013,EQ-03,TSLA,position
+Equity,-240625.0,ST-013,EQ-04,DIS,position
+Equity,-245000.0,ST-013,EQ-05,BA,position
+Equity,-170625.0,ST-013,EQ-06,NFLX,position
+Corporate Bond,-2559375.0,ST-013,CB-01,AAPL,position
+Corporate Bond,-3150000.0,ST-013,CB-02,MSFT,position
+Corporate Bond,-2411719.0,ST-013,CB-03,DIS,position
+Corporate Bond,-1624219.0,ST-013,CB-04,BA,position
+Corporate Bond,-1476563.0,ST-013,CB-05,INTC,position
+Corporate Bond,-885938.0,ST-013,CB-06,PYPL,position
+Corporate Bond,-721875.0,ST-013,CB-07,Meridian Chemicals,position
+Government Bond,-1995000.0,ST-013,GB-01,US Treasury 2Y,position
+Government Bond,-11156250.0,ST-013,GB-02,US Treasury 10Y,position
+Government Bond,-7875000.0,ST-013,GB-03,US Treasury 30Y,position
+Corporate Loan,-137156.0,ST-013,LN-01,BA,position
+Corporate Loan,-110852.0,ST-013,LN-02,DIS,position
+Corporate Loan,-198297.0,ST-013,LN-03,Harbor Freight Lines,position
+Corporate Loan,-388008.0,ST-013,LN-04,Northgate Retail,position
+Corporate Loan,-275625.0,ST-013,LN-05,Meridian Chemicals,position
+Interest Rate Swap,3937500.0,ST-013,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-4462500.0,ST-013,IRS-02,Receive fixed 10Y,position
+FX Forward,-525000.0,ST-013,FX-01,Long EUR / short USD,position
+FX Forward,-328125.0,ST-013,FX-02,Long JPY / short USD,position
+Credit Default Swap,147656.0,ST-013,CDS-01,BA,position
+Credit Default Swap,-393750.0,ST-013,CDS-02,CDX IG index,position
+Corporate Bond,-12829689.0,ST-014,,,asset_class
+Corporate Loan,-1109938.0,ST-014,,,asset_class
+Credit Default Swap,-246094.0,ST-014,,,asset_class
+Equity,-1760938.0,ST-014,,,asset_class
+FX Forward,-853125.0,ST-014,,,asset_class
+Government Bond,-21026250.0,ST-014,,,asset_class
+Interest Rate Swap,-525000.0,ST-014,,,asset_class
+Equity,-393750.0,ST-014,EQ-01,AAPL,position
+Equity,-360938.0,ST-014,EQ-02,MSFT,position
+Equity,-350000.0,ST-014,EQ-03,TSLA,position
+Equity,-240625.0,ST-014,EQ-04,DIS,position
+Equity,-245000.0,ST-014,EQ-05,BA,position
+Equity,-170625.0,ST-014,EQ-06,NFLX,position
+Corporate Bond,-2559375.0,ST-014,CB-01,AAPL,position
+Corporate Bond,-3150000.0,ST-014,CB-02,MSFT,position
+Corporate Bond,-2411719.0,ST-014,CB-03,DIS,position
+Corporate Bond,-1624219.0,ST-014,CB-04,BA,position
+Corporate Bond,-1476563.0,ST-014,CB-05,INTC,position
+Corporate Bond,-885938.0,ST-014,CB-06,PYPL,position
+Corporate Bond,-721875.0,ST-014,CB-07,Meridian Chemicals,position
+Government Bond,-1995000.0,ST-014,GB-01,US Treasury 2Y,position
+Government Bond,-11156250.0,ST-014,GB-02,US Treasury 10Y,position
+Government Bond,-7875000.0,ST-014,GB-03,US Treasury 30Y,position
+Corporate Loan,-137156.0,ST-014,LN-01,BA,position
+Corporate Loan,-110852.0,ST-014,LN-02,DIS,position
+Corporate Loan,-198297.0,ST-014,LN-03,Harbor Freight Lines,position
+Corporate Loan,-388008.0,ST-014,LN-04,Northgate Retail,position
+Corporate Loan,-275625.0,ST-014,LN-05,Meridian Chemicals,position
+Interest Rate Swap,3937500.0,ST-014,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-4462500.0,ST-014,IRS-02,Receive fixed 10Y,position
+FX Forward,-525000.0,ST-014,FX-01,Long EUR / short USD,position
+FX Forward,-328125.0,ST-014,FX-02,Long JPY / short USD,position
+Credit Default Swap,147656.0,ST-014,CDS-01,BA,position
+Credit Default Swap,-393750.0,ST-014,CDS-02,CDX IG index,position
+Corporate Bond,-12829689.0,ST-015,,,asset_class
+Corporate Loan,-1109938.0,ST-015,,,asset_class
+Credit Default Swap,-246094.0,ST-015,,,asset_class
+Equity,-1760938.0,ST-015,,,asset_class
+FX Forward,-853125.0,ST-015,,,asset_class
+Government Bond,-21026250.0,ST-015,,,asset_class
+Interest Rate Swap,-525000.0,ST-015,,,asset_class
+Equity,-393750.0,ST-015,EQ-01,AAPL,position
+Equity,-360938.0,ST-015,EQ-02,MSFT,position
+Equity,-350000.0,ST-015,EQ-03,TSLA,position
+Equity,-240625.0,ST-015,EQ-04,DIS,position
+Equity,-245000.0,ST-015,EQ-05,BA,position
+Equity,-170625.0,ST-015,EQ-06,NFLX,position
+Corporate Bond,-2559375.0,ST-015,CB-01,AAPL,position
+Corporate Bond,-3150000.0,ST-015,CB-02,MSFT,position
+Corporate Bond,-2411719.0,ST-015,CB-03,DIS,position
+Corporate Bond,-1624219.0,ST-015,CB-04,BA,position
+Corporate Bond,-1476563.0,ST-015,CB-05,INTC,position
+Corporate Bond,-885938.0,ST-015,CB-06,PYPL,position
+Corporate Bond,-721875.0,ST-015,CB-07,Meridian Chemicals,position
+Government Bond,-1995000.0,ST-015,GB-01,US Treasury 2Y,position
+Government Bond,-11156250.0,ST-015,GB-02,US Treasury 10Y,position
+Government Bond,-7875000.0,ST-015,GB-03,US Treasury 30Y,position
+Corporate Loan,-137156.0,ST-015,LN-01,BA,position
+Corporate Loan,-110852.0,ST-015,LN-02,DIS,position
+Corporate Loan,-198297.0,ST-015,LN-03,Harbor Freight Lines,position
+Corporate Loan,-388008.0,ST-015,LN-04,Northgate Retail,position
+Corporate Loan,-275625.0,ST-015,LN-05,Meridian Chemicals,position
+Interest Rate Swap,3937500.0,ST-015,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-4462500.0,ST-015,IRS-02,Receive fixed 10Y,position
+FX Forward,-525000.0,ST-015,FX-01,Long EUR / short USD,position
+FX Forward,-328125.0,ST-015,FX-02,Long JPY / short USD,position
+Credit Default Swap,147656.0,ST-015,CDS-01,BA,position
+Credit Default Swap,-393750.0,ST-015,CDS-02,CDX IG index,position
+Corporate Bond,-7185939.0,ST-016,,,asset_class
+Corporate Loan,-1085919.0,ST-016,,,asset_class
 Credit Default Swap,-246094.0,ST-016,,,asset_class
-Equity,-1760938.0,ST-016,,,asset_class
-FX Forward,-853125.0,ST-016,,,asset_class
-Government Bond,-21026250.0,ST-016,,,asset_class
-Interest Rate Swap,-525000.0,ST-016,,,asset_class
-Equity,-393750.0,ST-016,EQ-01,AAPL,position
-Equity,-360938.0,ST-016,EQ-02,MSFT,position
-Equity,-350000.0,ST-016,EQ-03,TSLA,position
-Equity,-240625.0,ST-016,EQ-04,DIS,position
-Equity,-245000.0,ST-016,EQ-05,BA,position
-Equity,-170625.0,ST-016,EQ-06,NFLX,position
-Corporate Bond,-2559375.0,ST-016,CB-01,AAPL,position
-Corporate Bond,-3150000.0,ST-016,CB-02,MSFT,position
-Corporate Bond,-2411719.0,ST-016,CB-03,DIS,position
-Corporate Bond,-1624219.0,ST-016,CB-04,BA,position
-Corporate Bond,-1476563.0,ST-016,CB-05,INTC,position
-Corporate Bond,-885938.0,ST-016,CB-06,PYPL,position
-Corporate Bond,-721875.0,ST-016,CB-07,Meridian Chemicals,position
-Government Bond,-1995000.0,ST-016,GB-01,US Treasury 2Y,position
-Government Bond,-11156250.0,ST-016,GB-02,US Treasury 10Y,position
-Government Bond,-7875000.0,ST-016,GB-03,US Treasury 30Y,position
-Corporate Loan,-137156.0,ST-016,LN-01,BA,position
-Corporate Loan,-110852.0,ST-016,LN-02,DIS,position
-Corporate Loan,-198297.0,ST-016,LN-03,Harbor Freight Lines,position
-Corporate Loan,-388008.0,ST-016,LN-04,Northgate Retail,position
-Corporate Loan,-275625.0,ST-016,LN-05,Meridian Chemicals,position
-Interest Rate Swap,3937500.0,ST-016,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-4462500.0,ST-016,IRS-02,Receive fixed 10Y,position
-FX Forward,-525000.0,ST-016,FX-01,Long EUR / short USD,position
-FX Forward,-328125.0,ST-016,FX-02,Long JPY / short USD,position
+Equity,-1408750.0,ST-016,,,asset_class
+FX Forward,-568750.0,ST-016,,,asset_class
+Government Bond,-10513125.0,ST-016,,,asset_class
+Interest Rate Swap,-262500.0,ST-016,,,asset_class
+Equity,-315000.0,ST-016,EQ-01,AAPL,position
+Equity,-288750.0,ST-016,EQ-02,MSFT,position
+Equity,-280000.0,ST-016,EQ-03,TSLA,position
+Equity,-192500.0,ST-016,EQ-04,DIS,position
+Equity,-196000.0,ST-016,EQ-05,BA,position
+Equity,-136500.0,ST-016,EQ-06,NFLX,position
+Corporate Bond,-1421875.0,ST-016,CB-01,AAPL,position
+Corporate Bond,-1750000.0,ST-016,CB-02,MSFT,position
+Corporate Bond,-1339844.0,ST-016,CB-03,DIS,position
+Corporate Bond,-902344.0,ST-016,CB-04,BA,position
+Corporate Bond,-820313.0,ST-016,CB-05,INTC,position
+Corporate Bond,-492188.0,ST-016,CB-06,PYPL,position
+Corporate Bond,-459375.0,ST-016,CB-07,Meridian Chemicals,position
+Government Bond,-997500.0,ST-016,GB-01,US Treasury 2Y,position
+Government Bond,-5578125.0,ST-016,GB-02,US Treasury 10Y,position
+Government Bond,-3937500.0,ST-016,GB-03,US Treasury 30Y,position
+Corporate Loan,-135975.0,ST-016,LN-01,BA,position
+Corporate Loan,-110556.0,ST-016,LN-02,DIS,position
+Corporate Loan,-196919.0,ST-016,LN-03,Harbor Freight Lines,position
+Corporate Loan,-382594.0,ST-016,LN-04,Northgate Retail,position
+Corporate Loan,-259875.0,ST-016,LN-05,Meridian Chemicals,position
+Interest Rate Swap,1968750.0,ST-016,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-2231250.0,ST-016,IRS-02,Receive fixed 10Y,position
+FX Forward,-350000.0,ST-016,FX-01,Long EUR / short USD,position
+FX Forward,-218750.0,ST-016,FX-02,Long JPY / short USD,position
 Credit Default Swap,147656.0,ST-016,CDS-01,BA,position
 Credit Default Swap,-393750.0,ST-016,CDS-02,CDX IG index,position
-Corporate Bond,-12829689.0,ST-017,,,asset_class
-Corporate Loan,-1109938.0,ST-017,,,asset_class
-Credit Default Swap,-246094.0,ST-017,,,asset_class
-Equity,-1760938.0,ST-017,,,asset_class
-FX Forward,-853125.0,ST-017,,,asset_class
-Government Bond,-21026250.0,ST-017,,,asset_class
-Interest Rate Swap,-525000.0,ST-017,,,asset_class
-Equity,-393750.0,ST-017,EQ-01,AAPL,position
-Equity,-360938.0,ST-017,EQ-02,MSFT,position
-Equity,-350000.0,ST-017,EQ-03,TSLA,position
-Equity,-240625.0,ST-017,EQ-04,DIS,position
-Equity,-245000.0,ST-017,EQ-05,BA,position
-Equity,-170625.0,ST-017,EQ-06,NFLX,position
-Corporate Bond,-2559375.0,ST-017,CB-01,AAPL,position
-Corporate Bond,-3150000.0,ST-017,CB-02,MSFT,position
-Corporate Bond,-2411719.0,ST-017,CB-03,DIS,position
-Corporate Bond,-1624219.0,ST-017,CB-04,BA,position
-Corporate Bond,-1476563.0,ST-017,CB-05,INTC,position
-Corporate Bond,-885938.0,ST-017,CB-06,PYPL,position
-Corporate Bond,-721875.0,ST-017,CB-07,Meridian Chemicals,position
-Government Bond,-1995000.0,ST-017,GB-01,US Treasury 2Y,position
-Government Bond,-11156250.0,ST-017,GB-02,US Treasury 10Y,position
-Government Bond,-7875000.0,ST-017,GB-03,US Treasury 30Y,position
-Corporate Loan,-137156.0,ST-017,LN-01,BA,position
-Corporate Loan,-110852.0,ST-017,LN-02,DIS,position
-Corporate Loan,-198297.0,ST-017,LN-03,Harbor Freight Lines,position
-Corporate Loan,-388008.0,ST-017,LN-04,Northgate Retail,position
-Corporate Loan,-275625.0,ST-017,LN-05,Meridian Chemicals,position
-Interest Rate Swap,3937500.0,ST-017,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-4462500.0,ST-017,IRS-02,Receive fixed 10Y,position
-FX Forward,-525000.0,ST-017,FX-01,Long EUR / short USD,position
-FX Forward,-328125.0,ST-017,FX-02,Long JPY / short USD,position
-Credit Default Swap,147656.0,ST-017,CDS-01,BA,position
-Credit Default Swap,-393750.0,ST-017,CDS-02,CDX IG index,position
-Corporate Bond,-7185939.0,ST-018,,,asset_class
-Corporate Loan,-1085919.0,ST-018,,,asset_class
-Credit Default Swap,-246094.0,ST-018,,,asset_class
-Equity,-1408750.0,ST-018,,,asset_class
-FX Forward,-568750.0,ST-018,,,asset_class
-Government Bond,-10513125.0,ST-018,,,asset_class
-Interest Rate Swap,-262500.0,ST-018,,,asset_class
-Equity,-315000.0,ST-018,EQ-01,AAPL,position
-Equity,-288750.0,ST-018,EQ-02,MSFT,position
-Equity,-280000.0,ST-018,EQ-03,TSLA,position
-Equity,-192500.0,ST-018,EQ-04,DIS,position
-Equity,-196000.0,ST-018,EQ-05,BA,position
-Equity,-136500.0,ST-018,EQ-06,NFLX,position
-Corporate Bond,-1421875.0,ST-018,CB-01,AAPL,position
-Corporate Bond,-1750000.0,ST-018,CB-02,MSFT,position
-Corporate Bond,-1339844.0,ST-018,CB-03,DIS,position
-Corporate Bond,-902344.0,ST-018,CB-04,BA,position
-Corporate Bond,-820313.0,ST-018,CB-05,INTC,position
-Corporate Bond,-492188.0,ST-018,CB-06,PYPL,position
-Corporate Bond,-459375.0,ST-018,CB-07,Meridian Chemicals,position
-Government Bond,-997500.0,ST-018,GB-01,US Treasury 2Y,position
-Government Bond,-5578125.0,ST-018,GB-02,US Treasury 10Y,position
-Government Bond,-3937500.0,ST-018,GB-03,US Treasury 30Y,position
-Corporate Loan,-135975.0,ST-018,LN-01,BA,position
-Corporate Loan,-110556.0,ST-018,LN-02,DIS,position
-Corporate Loan,-196919.0,ST-018,LN-03,Harbor Freight Lines,position
-Corporate Loan,-382594.0,ST-018,LN-04,Northgate Retail,position
-Corporate Loan,-259875.0,ST-018,LN-05,Meridian Chemicals,position
-Interest Rate Swap,1968750.0,ST-018,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-2231250.0,ST-018,IRS-02,Receive fixed 10Y,position
-FX Forward,-350000.0,ST-018,FX-01,Long EUR / short USD,position
-FX Forward,-218750.0,ST-018,FX-02,Long JPY / short USD,position
-Credit Default Swap,147656.0,ST-018,CDS-01,BA,position
-Credit Default Swap,-393750.0,ST-018,CDS-02,CDX IG index,position
+Corporate Bond,0.0,ST-017,,,asset_class
+Corporate Loan,0.0,ST-017,,,asset_class
+Credit Default Swap,0.0,ST-017,,,asset_class
+Equity,-2100000.0,ST-017,,,asset_class
+FX Forward,0.0,ST-017,,,asset_class
+Government Bond,0.0,ST-017,,,asset_class
+Interest Rate Swap,0.0,ST-017,,,asset_class
+Equity,0.0,ST-017,EQ-01,AAPL,position
+Equity,0.0,ST-017,EQ-02,MSFT,position
+Equity,-2100000.0,ST-017,EQ-03,TSLA,position
+Equity,0.0,ST-017,EQ-04,DIS,position
+Equity,0.0,ST-017,EQ-05,BA,position
+Equity,0.0,ST-017,EQ-06,NFLX,position
+Corporate Bond,-0.0,ST-017,CB-01,AAPL,position
+Corporate Bond,-0.0,ST-017,CB-02,MSFT,position
+Corporate Bond,-0.0,ST-017,CB-03,DIS,position
+Corporate Bond,-0.0,ST-017,CB-04,BA,position
+Corporate Bond,-0.0,ST-017,CB-05,INTC,position
+Corporate Bond,-0.0,ST-017,CB-06,PYPL,position
+Corporate Bond,-0.0,ST-017,CB-07,Meridian Chemicals,position
+Government Bond,-0.0,ST-017,GB-01,US Treasury 2Y,position
+Government Bond,-0.0,ST-017,GB-02,US Treasury 10Y,position
+Government Bond,-0.0,ST-017,GB-03,US Treasury 30Y,position
+Corporate Loan,-0.0,ST-017,LN-01,BA,position
+Corporate Loan,-0.0,ST-017,LN-02,DIS,position
+Corporate Loan,-0.0,ST-017,LN-03,Harbor Freight Lines,position
+Corporate Loan,-0.0,ST-017,LN-04,Northgate Retail,position
+Corporate Loan,-0.0,ST-017,LN-05,Meridian Chemicals,position
+Interest Rate Swap,0.0,ST-017,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-0.0,ST-017,IRS-02,Receive fixed 10Y,position
+FX Forward,-0.0,ST-017,FX-01,Long EUR / short USD,position
+FX Forward,-0.0,ST-017,FX-02,Long JPY / short USD,position
+Credit Default Swap,0.0,ST-017,CDS-01,BA,position
+Credit Default Swap,-0.0,ST-017,CDS-02,CDX IG index,position
+Corporate Bond,-6825000.0,ST-018,,,asset_class
+Corporate Loan,0.0,ST-018,,,asset_class
+Credit Default Swap,0.0,ST-018,,,asset_class
+Equity,-3150000.0,ST-018,,,asset_class
+FX Forward,0.0,ST-018,,,asset_class
+Government Bond,0.0,ST-018,,,asset_class
+Interest Rate Swap,0.0,ST-018,,,asset_class
+Equity,-3150000.0,ST-018,EQ-01,AAPL,position
+Equity,0.0,ST-018,EQ-02,MSFT,position
+Equity,0.0,ST-018,EQ-03,TSLA,position
+Equity,0.0,ST-018,EQ-04,DIS,position
+Equity,0.0,ST-018,EQ-05,BA,position
+Equity,0.0,ST-018,EQ-06,NFLX,position
+Corporate Bond,-6825000.0,ST-018,CB-01,AAPL,position
+Corporate Bond,-0.0,ST-018,CB-02,MSFT,position
+Corporate Bond,-0.0,ST-018,CB-03,DIS,position
+Corporate Bond,-0.0,ST-018,CB-04,BA,position
+Corporate Bond,-0.0,ST-018,CB-05,INTC,position
+Corporate Bond,-0.0,ST-018,CB-06,PYPL,position
+Corporate Bond,-0.0,ST-018,CB-07,Meridian Chemicals,position
+Government Bond,-0.0,ST-018,GB-01,US Treasury 2Y,position
+Government Bond,-0.0,ST-018,GB-02,US Treasury 10Y,position
+Government Bond,-0.0,ST-018,GB-03,US Treasury 30Y,position
+Corporate Loan,-0.0,ST-018,LN-01,BA,position
+Corporate Loan,-0.0,ST-018,LN-02,DIS,position
+Corporate Loan,-0.0,ST-018,LN-03,Harbor Freight Lines,position
+Corporate Loan,-0.0,ST-018,LN-04,Northgate Retail,position
+Corporate Loan,-0.0,ST-018,LN-05,Meridian Chemicals,position
+Interest Rate Swap,0.0,ST-018,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-0.0,ST-018,IRS-02,Receive fixed 10Y,position
+FX Forward,-0.0,ST-018,FX-01,Long EUR / short USD,position
+FX Forward,-0.0,ST-018,FX-02,Long JPY / short USD,position
+Credit Default Swap,0.0,ST-018,CDS-01,BA,position
+Credit Default Swap,-0.0,ST-018,CDS-02,CDX IG index,position
 Corporate Bond,-12829689.0,ST-019,,,asset_class
 Corporate Loan,-1109938.0,ST-019,,,asset_class
 Credit Default Swap,-246094.0,ST-019,,,asset_class
@@ -645,20 +645,20 @@ FX Forward,-525000.0,ST-019,FX-01,Long EUR / short USD,position
 FX Forward,-328125.0,ST-019,FX-02,Long JPY / short USD,position
 Credit Default Swap,147656.0,ST-019,CDS-01,BA,position
 Credit Default Swap,-393750.0,ST-019,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-020,,,asset_class
+Corporate Bond,-6825000.0,ST-020,,,asset_class
 Corporate Loan,0.0,ST-020,,,asset_class
 Credit Default Swap,0.0,ST-020,,,asset_class
-Equity,-2800000.0,ST-020,,,asset_class
+Equity,-3150000.0,ST-020,,,asset_class
 FX Forward,0.0,ST-020,,,asset_class
 Government Bond,0.0,ST-020,,,asset_class
 Interest Rate Swap,0.0,ST-020,,,asset_class
-Equity,0.0,ST-020,EQ-01,AAPL,position
+Equity,-3150000.0,ST-020,EQ-01,AAPL,position
 Equity,0.0,ST-020,EQ-02,MSFT,position
-Equity,-2800000.0,ST-020,EQ-03,TSLA,position
+Equity,0.0,ST-020,EQ-03,TSLA,position
 Equity,0.0,ST-020,EQ-04,DIS,position
 Equity,0.0,ST-020,EQ-05,BA,position
 Equity,0.0,ST-020,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-020,CB-01,AAPL,position
+Corporate Bond,-6825000.0,ST-020,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-020,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-020,CB-03,DIS,position
 Corporate Bond,-0.0,ST-020,CB-04,BA,position
@@ -679,20 +679,20 @@ FX Forward,-0.0,ST-020,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-020,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-020,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-020,CDS-02,CDX IG index,position
-Corporate Bond,-6825000.0,ST-021,,,asset_class
+Corporate Bond,0.0,ST-021,,,asset_class
 Corporate Loan,0.0,ST-021,,,asset_class
 Credit Default Swap,0.0,ST-021,,,asset_class
-Equity,-3150000.0,ST-021,,,asset_class
+Equity,-1023750.0,ST-021,,,asset_class
 FX Forward,0.0,ST-021,,,asset_class
 Government Bond,0.0,ST-021,,,asset_class
 Interest Rate Swap,0.0,ST-021,,,asset_class
-Equity,-3150000.0,ST-021,EQ-01,AAPL,position
+Equity,0.0,ST-021,EQ-01,AAPL,position
 Equity,0.0,ST-021,EQ-02,MSFT,position
 Equity,0.0,ST-021,EQ-03,TSLA,position
 Equity,0.0,ST-021,EQ-04,DIS,position
 Equity,0.0,ST-021,EQ-05,BA,position
-Equity,0.0,ST-021,EQ-06,NFLX,position
-Corporate Bond,-6825000.0,ST-021,CB-01,AAPL,position
+Equity,-1023750.0,ST-021,EQ-06,NFLX,position
+Corporate Bond,-0.0,ST-021,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-021,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-021,CB-03,DIS,position
 Corporate Bond,-0.0,ST-021,CB-04,BA,position
@@ -713,20 +713,20 @@ FX Forward,-0.0,ST-021,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-021,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-021,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-021,CDS-02,CDX IG index,position
-Corporate Bond,-6825000.0,ST-022,,,asset_class
+Corporate Bond,0.0,ST-022,,,asset_class
 Corporate Loan,0.0,ST-022,,,asset_class
 Credit Default Swap,0.0,ST-022,,,asset_class
-Equity,-3150000.0,ST-022,,,asset_class
+Equity,-2100000.0,ST-022,,,asset_class
 FX Forward,0.0,ST-022,,,asset_class
 Government Bond,0.0,ST-022,,,asset_class
 Interest Rate Swap,0.0,ST-022,,,asset_class
-Equity,-3150000.0,ST-022,EQ-01,AAPL,position
+Equity,0.0,ST-022,EQ-01,AAPL,position
 Equity,0.0,ST-022,EQ-02,MSFT,position
-Equity,0.0,ST-022,EQ-03,TSLA,position
+Equity,-2100000.0,ST-022,EQ-03,TSLA,position
 Equity,0.0,ST-022,EQ-04,DIS,position
 Equity,0.0,ST-022,EQ-05,BA,position
 Equity,0.0,ST-022,EQ-06,NFLX,position
-Corporate Bond,-6825000.0,ST-022,CB-01,AAPL,position
+Corporate Bond,-0.0,ST-022,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-022,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-022,CB-03,DIS,position
 Corporate Bond,-0.0,ST-022,CB-04,BA,position
@@ -784,13 +784,13 @@ Credit Default Swap,-393750.0,ST-023,CDS-02,CDX IG index,position
 Corporate Bond,0.0,ST-024,,,asset_class
 Corporate Loan,0.0,ST-024,,,asset_class
 Credit Default Swap,0.0,ST-024,,,asset_class
-Equity,-2800000.0,ST-024,,,asset_class
+Equity,-2100000.0,ST-024,,,asset_class
 FX Forward,0.0,ST-024,,,asset_class
 Government Bond,0.0,ST-024,,,asset_class
 Interest Rate Swap,0.0,ST-024,,,asset_class
 Equity,0.0,ST-024,EQ-01,AAPL,position
 Equity,0.0,ST-024,EQ-02,MSFT,position
-Equity,-2800000.0,ST-024,EQ-03,TSLA,position
+Equity,-2100000.0,ST-024,EQ-03,TSLA,position
 Equity,0.0,ST-024,EQ-04,DIS,position
 Equity,0.0,ST-024,EQ-05,BA,position
 Equity,0.0,ST-024,EQ-06,NFLX,position
@@ -815,54 +815,54 @@ FX Forward,-0.0,ST-024,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-024,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-024,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-024,CDS-02,CDX IG index,position
-Corporate Bond,-3150000.0,ST-025,,,asset_class
-Corporate Loan,-3023781.0,ST-025,,,asset_class
-Credit Default Swap,-738281.0,ST-025,,,asset_class
-Equity,-3521875.0,ST-025,,,asset_class
-FX Forward,-1421875.0,ST-025,,,asset_class
-Government Bond,2628281.0,ST-025,,,asset_class
-Interest Rate Swap,65624.0,ST-025,,,asset_class
-Equity,-787500.0,ST-025,EQ-01,AAPL,position
-Equity,-721875.0,ST-025,EQ-02,MSFT,position
-Equity,-700000.0,ST-025,EQ-03,TSLA,position
-Equity,-481250.0,ST-025,EQ-04,DIS,position
-Equity,-490000.0,ST-025,EQ-05,BA,position
-Equity,-341250.0,ST-025,EQ-06,NFLX,position
-Corporate Bond,-568750.0,ST-025,CB-01,AAPL,position
-Corporate Bond,-700000.0,ST-025,CB-02,MSFT,position
-Corporate Bond,-535938.0,ST-025,CB-03,DIS,position
-Corporate Bond,-360937.0,ST-025,CB-04,BA,position
-Corporate Bond,-328125.0,ST-025,CB-05,INTC,position
-Corporate Bond,-196875.0,ST-025,CB-06,PYPL,position
-Corporate Bond,-459375.0,ST-025,CB-07,Meridian Chemicals,position
-Government Bond,249375.0,ST-025,GB-01,US Treasury 2Y,position
-Government Bond,1394531.0,ST-025,GB-02,US Treasury 10Y,position
-Government Bond,984375.0,ST-025,GB-03,US Treasury 30Y,position
-Corporate Loan,-405562.0,ST-025,LN-01,BA,position
-Corporate Loan,-331078.0,ST-025,LN-02,DIS,position
-Corporate Loan,-588000.0,ST-025,LN-03,Harbor Freight Lines,position
-Corporate Loan,-1016641.0,ST-025,LN-04,Northgate Retail,position
-Corporate Loan,-682500.0,ST-025,LN-05,Meridian Chemicals,position
-Interest Rate Swap,-492188.0,ST-025,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,557812.0,ST-025,IRS-02,Receive fixed 10Y,position
-FX Forward,-875000.0,ST-025,FX-01,Long EUR / short USD,position
-FX Forward,-546875.0,ST-025,FX-02,Long JPY / short USD,position
-Credit Default Swap,442969.0,ST-025,CDS-01,BA,position
-Credit Default Swap,-1181250.0,ST-025,CDS-02,CDX IG index,position
-Corporate Bond,-6825000.0,ST-026,,,asset_class
+Corporate Bond,0.0,ST-025,,,asset_class
+Corporate Loan,0.0,ST-025,,,asset_class
+Credit Default Swap,0.0,ST-025,,,asset_class
+Equity,-1023750.0,ST-025,,,asset_class
+FX Forward,0.0,ST-025,,,asset_class
+Government Bond,0.0,ST-025,,,asset_class
+Interest Rate Swap,0.0,ST-025,,,asset_class
+Equity,0.0,ST-025,EQ-01,AAPL,position
+Equity,0.0,ST-025,EQ-02,MSFT,position
+Equity,0.0,ST-025,EQ-03,TSLA,position
+Equity,0.0,ST-025,EQ-04,DIS,position
+Equity,0.0,ST-025,EQ-05,BA,position
+Equity,-1023750.0,ST-025,EQ-06,NFLX,position
+Corporate Bond,-0.0,ST-025,CB-01,AAPL,position
+Corporate Bond,-0.0,ST-025,CB-02,MSFT,position
+Corporate Bond,-0.0,ST-025,CB-03,DIS,position
+Corporate Bond,-0.0,ST-025,CB-04,BA,position
+Corporate Bond,-0.0,ST-025,CB-05,INTC,position
+Corporate Bond,-0.0,ST-025,CB-06,PYPL,position
+Corporate Bond,-0.0,ST-025,CB-07,Meridian Chemicals,position
+Government Bond,-0.0,ST-025,GB-01,US Treasury 2Y,position
+Government Bond,-0.0,ST-025,GB-02,US Treasury 10Y,position
+Government Bond,-0.0,ST-025,GB-03,US Treasury 30Y,position
+Corporate Loan,-0.0,ST-025,LN-01,BA,position
+Corporate Loan,-0.0,ST-025,LN-02,DIS,position
+Corporate Loan,-0.0,ST-025,LN-03,Harbor Freight Lines,position
+Corporate Loan,-0.0,ST-025,LN-04,Northgate Retail,position
+Corporate Loan,-0.0,ST-025,LN-05,Meridian Chemicals,position
+Interest Rate Swap,0.0,ST-025,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-0.0,ST-025,IRS-02,Receive fixed 10Y,position
+FX Forward,-0.0,ST-025,FX-01,Long EUR / short USD,position
+FX Forward,-0.0,ST-025,FX-02,Long JPY / short USD,position
+Credit Default Swap,0.0,ST-025,CDS-01,BA,position
+Credit Default Swap,-0.0,ST-025,CDS-02,CDX IG index,position
+Corporate Bond,0.0,ST-026,,,asset_class
 Corporate Loan,0.0,ST-026,,,asset_class
 Credit Default Swap,0.0,ST-026,,,asset_class
-Equity,-3150000.0,ST-026,,,asset_class
+Equity,-1023750.0,ST-026,,,asset_class
 FX Forward,0.0,ST-026,,,asset_class
 Government Bond,0.0,ST-026,,,asset_class
 Interest Rate Swap,0.0,ST-026,,,asset_class
-Equity,-3150000.0,ST-026,EQ-01,AAPL,position
+Equity,0.0,ST-026,EQ-01,AAPL,position
 Equity,0.0,ST-026,EQ-02,MSFT,position
 Equity,0.0,ST-026,EQ-03,TSLA,position
 Equity,0.0,ST-026,EQ-04,DIS,position
 Equity,0.0,ST-026,EQ-05,BA,position
-Equity,0.0,ST-026,EQ-06,NFLX,position
-Corporate Bond,-6825000.0,ST-026,CB-01,AAPL,position
+Equity,-1023750.0,ST-026,EQ-06,NFLX,position
+Corporate Bond,-0.0,ST-026,CB-01,AAPL,position
 Corporate Bond,-0.0,ST-026,CB-02,MSFT,position
 Corporate Bond,-0.0,ST-026,CB-03,DIS,position
 Corporate Bond,-0.0,ST-026,CB-04,BA,position
@@ -883,50 +883,50 @@ FX Forward,-0.0,ST-026,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-026,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-026,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-026,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-027,,,asset_class
-Corporate Loan,0.0,ST-027,,,asset_class
-Credit Default Swap,0.0,ST-027,,,asset_class
-Equity,-1023750.0,ST-027,,,asset_class
-FX Forward,0.0,ST-027,,,asset_class
-Government Bond,0.0,ST-027,,,asset_class
-Interest Rate Swap,0.0,ST-027,,,asset_class
-Equity,0.0,ST-027,EQ-01,AAPL,position
-Equity,0.0,ST-027,EQ-02,MSFT,position
-Equity,0.0,ST-027,EQ-03,TSLA,position
-Equity,0.0,ST-027,EQ-04,DIS,position
-Equity,0.0,ST-027,EQ-05,BA,position
-Equity,-1023750.0,ST-027,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-027,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-027,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-027,CB-03,DIS,position
-Corporate Bond,-0.0,ST-027,CB-04,BA,position
-Corporate Bond,-0.0,ST-027,CB-05,INTC,position
-Corporate Bond,-0.0,ST-027,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-027,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-027,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-027,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-027,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-027,LN-01,BA,position
-Corporate Loan,-0.0,ST-027,LN-02,DIS,position
-Corporate Loan,-0.0,ST-027,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-027,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-027,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-027,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-027,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-027,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-027,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-027,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-027,CDS-02,CDX IG index,position
+Corporate Bond,-3150000.0,ST-027,,,asset_class
+Corporate Loan,-3023781.0,ST-027,,,asset_class
+Credit Default Swap,-738281.0,ST-027,,,asset_class
+Equity,-3521875.0,ST-027,,,asset_class
+FX Forward,-1421875.0,ST-027,,,asset_class
+Government Bond,2628281.0,ST-027,,,asset_class
+Interest Rate Swap,65624.0,ST-027,,,asset_class
+Equity,-787500.0,ST-027,EQ-01,AAPL,position
+Equity,-721875.0,ST-027,EQ-02,MSFT,position
+Equity,-700000.0,ST-027,EQ-03,TSLA,position
+Equity,-481250.0,ST-027,EQ-04,DIS,position
+Equity,-490000.0,ST-027,EQ-05,BA,position
+Equity,-341250.0,ST-027,EQ-06,NFLX,position
+Corporate Bond,-568750.0,ST-027,CB-01,AAPL,position
+Corporate Bond,-700000.0,ST-027,CB-02,MSFT,position
+Corporate Bond,-535938.0,ST-027,CB-03,DIS,position
+Corporate Bond,-360937.0,ST-027,CB-04,BA,position
+Corporate Bond,-328125.0,ST-027,CB-05,INTC,position
+Corporate Bond,-196875.0,ST-027,CB-06,PYPL,position
+Corporate Bond,-459375.0,ST-027,CB-07,Meridian Chemicals,position
+Government Bond,249375.0,ST-027,GB-01,US Treasury 2Y,position
+Government Bond,1394531.0,ST-027,GB-02,US Treasury 10Y,position
+Government Bond,984375.0,ST-027,GB-03,US Treasury 30Y,position
+Corporate Loan,-405562.0,ST-027,LN-01,BA,position
+Corporate Loan,-331078.0,ST-027,LN-02,DIS,position
+Corporate Loan,-588000.0,ST-027,LN-03,Harbor Freight Lines,position
+Corporate Loan,-1016641.0,ST-027,LN-04,Northgate Retail,position
+Corporate Loan,-682500.0,ST-027,LN-05,Meridian Chemicals,position
+Interest Rate Swap,-492188.0,ST-027,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,557812.0,ST-027,IRS-02,Receive fixed 10Y,position
+FX Forward,-875000.0,ST-027,FX-01,Long EUR / short USD,position
+FX Forward,-546875.0,ST-027,FX-02,Long JPY / short USD,position
+Credit Default Swap,442969.0,ST-027,CDS-01,BA,position
+Credit Default Swap,-1181250.0,ST-027,CDS-02,CDX IG index,position
 Corporate Bond,0.0,ST-028,,,asset_class
 Corporate Loan,0.0,ST-028,,,asset_class
 Credit Default Swap,0.0,ST-028,,,asset_class
-Equity,-2800000.0,ST-028,,,asset_class
+Equity,-2100000.0,ST-028,,,asset_class
 FX Forward,0.0,ST-028,,,asset_class
 Government Bond,0.0,ST-028,,,asset_class
 Interest Rate Swap,0.0,ST-028,,,asset_class
 Equity,0.0,ST-028,EQ-01,AAPL,position
 Equity,0.0,ST-028,EQ-02,MSFT,position
-Equity,-2800000.0,ST-028,EQ-03,TSLA,position
+Equity,-2100000.0,ST-028,EQ-03,TSLA,position
 Equity,0.0,ST-028,EQ-04,DIS,position
 Equity,0.0,ST-028,EQ-05,BA,position
 Equity,0.0,ST-028,EQ-06,NFLX,position
@@ -951,40 +951,40 @@ FX Forward,-0.0,ST-028,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-028,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-028,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-028,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-029,,,asset_class
-Corporate Loan,0.0,ST-029,,,asset_class
-Credit Default Swap,0.0,ST-029,,,asset_class
-Equity,-2100000.0,ST-029,,,asset_class
-FX Forward,0.0,ST-029,,,asset_class
-Government Bond,0.0,ST-029,,,asset_class
-Interest Rate Swap,0.0,ST-029,,,asset_class
-Equity,0.0,ST-029,EQ-01,AAPL,position
-Equity,0.0,ST-029,EQ-02,MSFT,position
-Equity,-2100000.0,ST-029,EQ-03,TSLA,position
-Equity,0.0,ST-029,EQ-04,DIS,position
-Equity,0.0,ST-029,EQ-05,BA,position
-Equity,0.0,ST-029,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-029,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-029,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-029,CB-03,DIS,position
-Corporate Bond,-0.0,ST-029,CB-04,BA,position
-Corporate Bond,-0.0,ST-029,CB-05,INTC,position
-Corporate Bond,-0.0,ST-029,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-029,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-029,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-029,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-029,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-029,LN-01,BA,position
-Corporate Loan,-0.0,ST-029,LN-02,DIS,position
-Corporate Loan,-0.0,ST-029,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-029,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-029,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-029,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-029,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-029,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-029,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-029,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-029,CDS-02,CDX IG index,position
+Corporate Bond,-12829689.0,ST-029,,,asset_class
+Corporate Loan,-1109938.0,ST-029,,,asset_class
+Credit Default Swap,-246094.0,ST-029,,,asset_class
+Equity,-1760938.0,ST-029,,,asset_class
+FX Forward,-853125.0,ST-029,,,asset_class
+Government Bond,-21026250.0,ST-029,,,asset_class
+Interest Rate Swap,-525000.0,ST-029,,,asset_class
+Equity,-393750.0,ST-029,EQ-01,AAPL,position
+Equity,-360938.0,ST-029,EQ-02,MSFT,position
+Equity,-350000.0,ST-029,EQ-03,TSLA,position
+Equity,-240625.0,ST-029,EQ-04,DIS,position
+Equity,-245000.0,ST-029,EQ-05,BA,position
+Equity,-170625.0,ST-029,EQ-06,NFLX,position
+Corporate Bond,-2559375.0,ST-029,CB-01,AAPL,position
+Corporate Bond,-3150000.0,ST-029,CB-02,MSFT,position
+Corporate Bond,-2411719.0,ST-029,CB-03,DIS,position
+Corporate Bond,-1624219.0,ST-029,CB-04,BA,position
+Corporate Bond,-1476563.0,ST-029,CB-05,INTC,position
+Corporate Bond,-885938.0,ST-029,CB-06,PYPL,position
+Corporate Bond,-721875.0,ST-029,CB-07,Meridian Chemicals,position
+Government Bond,-1995000.0,ST-029,GB-01,US Treasury 2Y,position
+Government Bond,-11156250.0,ST-029,GB-02,US Treasury 10Y,position
+Government Bond,-7875000.0,ST-029,GB-03,US Treasury 30Y,position
+Corporate Loan,-137156.0,ST-029,LN-01,BA,position
+Corporate Loan,-110852.0,ST-029,LN-02,DIS,position
+Corporate Loan,-198297.0,ST-029,LN-03,Harbor Freight Lines,position
+Corporate Loan,-388008.0,ST-029,LN-04,Northgate Retail,position
+Corporate Loan,-275625.0,ST-029,LN-05,Meridian Chemicals,position
+Interest Rate Swap,3937500.0,ST-029,IRS-01,Pay fixed 5Y (hedge),position
+Interest Rate Swap,-4462500.0,ST-029,IRS-02,Receive fixed 10Y,position
+FX Forward,-525000.0,ST-029,FX-01,Long EUR / short USD,position
+FX Forward,-328125.0,ST-029,FX-02,Long JPY / short USD,position
+Credit Default Swap,147656.0,ST-029,CDS-01,BA,position
+Credit Default Swap,-393750.0,ST-029,CDS-02,CDX IG index,position
 Corporate Bond,0.0,ST-030,,,asset_class
 Corporate Loan,0.0,ST-030,,,asset_class
 Credit Default Swap,0.0,ST-030,,,asset_class
@@ -1053,309 +1053,3 @@ FX Forward,-0.0,ST-031,FX-01,Long EUR / short USD,position
 FX Forward,-0.0,ST-031,FX-02,Long JPY / short USD,position
 Credit Default Swap,0.0,ST-031,CDS-01,BA,position
 Credit Default Swap,-0.0,ST-031,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-032,,,asset_class
-Corporate Loan,0.0,ST-032,,,asset_class
-Credit Default Swap,0.0,ST-032,,,asset_class
-Equity,-2800000.0,ST-032,,,asset_class
-FX Forward,0.0,ST-032,,,asset_class
-Government Bond,0.0,ST-032,,,asset_class
-Interest Rate Swap,0.0,ST-032,,,asset_class
-Equity,0.0,ST-032,EQ-01,AAPL,position
-Equity,0.0,ST-032,EQ-02,MSFT,position
-Equity,-2800000.0,ST-032,EQ-03,TSLA,position
-Equity,0.0,ST-032,EQ-04,DIS,position
-Equity,0.0,ST-032,EQ-05,BA,position
-Equity,0.0,ST-032,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-032,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-032,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-032,CB-03,DIS,position
-Corporate Bond,-0.0,ST-032,CB-04,BA,position
-Corporate Bond,-0.0,ST-032,CB-05,INTC,position
-Corporate Bond,-0.0,ST-032,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-032,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-032,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-032,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-032,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-032,LN-01,BA,position
-Corporate Loan,-0.0,ST-032,LN-02,DIS,position
-Corporate Loan,-0.0,ST-032,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-032,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-032,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-032,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-032,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-032,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-032,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-032,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-032,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-033,,,asset_class
-Corporate Loan,0.0,ST-033,,,asset_class
-Credit Default Swap,0.0,ST-033,,,asset_class
-Equity,-1023750.0,ST-033,,,asset_class
-FX Forward,0.0,ST-033,,,asset_class
-Government Bond,0.0,ST-033,,,asset_class
-Interest Rate Swap,0.0,ST-033,,,asset_class
-Equity,0.0,ST-033,EQ-01,AAPL,position
-Equity,0.0,ST-033,EQ-02,MSFT,position
-Equity,0.0,ST-033,EQ-03,TSLA,position
-Equity,0.0,ST-033,EQ-04,DIS,position
-Equity,0.0,ST-033,EQ-05,BA,position
-Equity,-1023750.0,ST-033,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-033,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-033,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-033,CB-03,DIS,position
-Corporate Bond,-0.0,ST-033,CB-04,BA,position
-Corporate Bond,-0.0,ST-033,CB-05,INTC,position
-Corporate Bond,-0.0,ST-033,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-033,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-033,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-033,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-033,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-033,LN-01,BA,position
-Corporate Loan,-0.0,ST-033,LN-02,DIS,position
-Corporate Loan,-0.0,ST-033,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-033,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-033,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-033,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-033,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-033,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-033,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-033,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-033,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-034,,,asset_class
-Corporate Loan,0.0,ST-034,,,asset_class
-Credit Default Swap,0.0,ST-034,,,asset_class
-Equity,-1023750.0,ST-034,,,asset_class
-FX Forward,0.0,ST-034,,,asset_class
-Government Bond,0.0,ST-034,,,asset_class
-Interest Rate Swap,0.0,ST-034,,,asset_class
-Equity,0.0,ST-034,EQ-01,AAPL,position
-Equity,0.0,ST-034,EQ-02,MSFT,position
-Equity,0.0,ST-034,EQ-03,TSLA,position
-Equity,0.0,ST-034,EQ-04,DIS,position
-Equity,0.0,ST-034,EQ-05,BA,position
-Equity,-1023750.0,ST-034,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-034,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-034,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-034,CB-03,DIS,position
-Corporate Bond,-0.0,ST-034,CB-04,BA,position
-Corporate Bond,-0.0,ST-034,CB-05,INTC,position
-Corporate Bond,-0.0,ST-034,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-034,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-034,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-034,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-034,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-034,LN-01,BA,position
-Corporate Loan,-0.0,ST-034,LN-02,DIS,position
-Corporate Loan,-0.0,ST-034,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-034,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-034,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-034,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-034,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-034,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-034,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-034,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-034,CDS-02,CDX IG index,position
-Corporate Bond,-3150000.0,ST-035,,,asset_class
-Corporate Loan,-3023781.0,ST-035,,,asset_class
-Credit Default Swap,-738281.0,ST-035,,,asset_class
-Equity,-3521875.0,ST-035,,,asset_class
-FX Forward,-1421875.0,ST-035,,,asset_class
-Government Bond,2628281.0,ST-035,,,asset_class
-Interest Rate Swap,65624.0,ST-035,,,asset_class
-Equity,-787500.0,ST-035,EQ-01,AAPL,position
-Equity,-721875.0,ST-035,EQ-02,MSFT,position
-Equity,-700000.0,ST-035,EQ-03,TSLA,position
-Equity,-481250.0,ST-035,EQ-04,DIS,position
-Equity,-490000.0,ST-035,EQ-05,BA,position
-Equity,-341250.0,ST-035,EQ-06,NFLX,position
-Corporate Bond,-568750.0,ST-035,CB-01,AAPL,position
-Corporate Bond,-700000.0,ST-035,CB-02,MSFT,position
-Corporate Bond,-535938.0,ST-035,CB-03,DIS,position
-Corporate Bond,-360937.0,ST-035,CB-04,BA,position
-Corporate Bond,-328125.0,ST-035,CB-05,INTC,position
-Corporate Bond,-196875.0,ST-035,CB-06,PYPL,position
-Corporate Bond,-459375.0,ST-035,CB-07,Meridian Chemicals,position
-Government Bond,249375.0,ST-035,GB-01,US Treasury 2Y,position
-Government Bond,1394531.0,ST-035,GB-02,US Treasury 10Y,position
-Government Bond,984375.0,ST-035,GB-03,US Treasury 30Y,position
-Corporate Loan,-405562.0,ST-035,LN-01,BA,position
-Corporate Loan,-331078.0,ST-035,LN-02,DIS,position
-Corporate Loan,-588000.0,ST-035,LN-03,Harbor Freight Lines,position
-Corporate Loan,-1016641.0,ST-035,LN-04,Northgate Retail,position
-Corporate Loan,-682500.0,ST-035,LN-05,Meridian Chemicals,position
-Interest Rate Swap,-492188.0,ST-035,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,557812.0,ST-035,IRS-02,Receive fixed 10Y,position
-FX Forward,-875000.0,ST-035,FX-01,Long EUR / short USD,position
-FX Forward,-546875.0,ST-035,FX-02,Long JPY / short USD,position
-Credit Default Swap,442969.0,ST-035,CDS-01,BA,position
-Credit Default Swap,-1181250.0,ST-035,CDS-02,CDX IG index,position
-Corporate Bond,-12829689.0,ST-036,,,asset_class
-Corporate Loan,-1109938.0,ST-036,,,asset_class
-Credit Default Swap,-246094.0,ST-036,,,asset_class
-Equity,-1760938.0,ST-036,,,asset_class
-FX Forward,-853125.0,ST-036,,,asset_class
-Government Bond,-21026250.0,ST-036,,,asset_class
-Interest Rate Swap,-525000.0,ST-036,,,asset_class
-Equity,-393750.0,ST-036,EQ-01,AAPL,position
-Equity,-360938.0,ST-036,EQ-02,MSFT,position
-Equity,-350000.0,ST-036,EQ-03,TSLA,position
-Equity,-240625.0,ST-036,EQ-04,DIS,position
-Equity,-245000.0,ST-036,EQ-05,BA,position
-Equity,-170625.0,ST-036,EQ-06,NFLX,position
-Corporate Bond,-2559375.0,ST-036,CB-01,AAPL,position
-Corporate Bond,-3150000.0,ST-036,CB-02,MSFT,position
-Corporate Bond,-2411719.0,ST-036,CB-03,DIS,position
-Corporate Bond,-1624219.0,ST-036,CB-04,BA,position
-Corporate Bond,-1476563.0,ST-036,CB-05,INTC,position
-Corporate Bond,-885938.0,ST-036,CB-06,PYPL,position
-Corporate Bond,-721875.0,ST-036,CB-07,Meridian Chemicals,position
-Government Bond,-1995000.0,ST-036,GB-01,US Treasury 2Y,position
-Government Bond,-11156250.0,ST-036,GB-02,US Treasury 10Y,position
-Government Bond,-7875000.0,ST-036,GB-03,US Treasury 30Y,position
-Corporate Loan,-137156.0,ST-036,LN-01,BA,position
-Corporate Loan,-110852.0,ST-036,LN-02,DIS,position
-Corporate Loan,-198297.0,ST-036,LN-03,Harbor Freight Lines,position
-Corporate Loan,-388008.0,ST-036,LN-04,Northgate Retail,position
-Corporate Loan,-275625.0,ST-036,LN-05,Meridian Chemicals,position
-Interest Rate Swap,3937500.0,ST-036,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-4462500.0,ST-036,IRS-02,Receive fixed 10Y,position
-FX Forward,-525000.0,ST-036,FX-01,Long EUR / short USD,position
-FX Forward,-328125.0,ST-036,FX-02,Long JPY / short USD,position
-Credit Default Swap,147656.0,ST-036,CDS-01,BA,position
-Credit Default Swap,-393750.0,ST-036,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-037,,,asset_class
-Corporate Loan,0.0,ST-037,,,asset_class
-Credit Default Swap,0.0,ST-037,,,asset_class
-Equity,-2100000.0,ST-037,,,asset_class
-FX Forward,0.0,ST-037,,,asset_class
-Government Bond,0.0,ST-037,,,asset_class
-Interest Rate Swap,0.0,ST-037,,,asset_class
-Equity,0.0,ST-037,EQ-01,AAPL,position
-Equity,0.0,ST-037,EQ-02,MSFT,position
-Equity,-2100000.0,ST-037,EQ-03,TSLA,position
-Equity,0.0,ST-037,EQ-04,DIS,position
-Equity,0.0,ST-037,EQ-05,BA,position
-Equity,0.0,ST-037,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-037,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-037,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-037,CB-03,DIS,position
-Corporate Bond,-0.0,ST-037,CB-04,BA,position
-Corporate Bond,-0.0,ST-037,CB-05,INTC,position
-Corporate Bond,-0.0,ST-037,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-037,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-037,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-037,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-037,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-037,LN-01,BA,position
-Corporate Loan,-0.0,ST-037,LN-02,DIS,position
-Corporate Loan,-0.0,ST-037,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-037,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-037,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-037,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-037,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-037,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-037,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-037,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-037,CDS-02,CDX IG index,position
-Corporate Bond,-603751.0,ST-038,,,asset_class
-Corporate Loan,-406788.0,ST-038,,,asset_class
-Credit Default Swap,-98438.0,ST-038,,,asset_class
-Equity,-1056563.0,ST-038,,,asset_class
-FX Forward,-2275000.0,ST-038,,,asset_class
-Government Bond,0.0,ST-038,,,asset_class
-Interest Rate Swap,0.0,ST-038,,,asset_class
-Equity,-236250.0,ST-038,EQ-01,AAPL,position
-Equity,-216563.0,ST-038,EQ-02,MSFT,position
-Equity,-210000.0,ST-038,EQ-03,TSLA,position
-Equity,-144375.0,ST-038,EQ-04,DIS,position
-Equity,-147000.0,ST-038,EQ-05,BA,position
-Equity,-102375.0,ST-038,EQ-06,NFLX,position
-Corporate Bond,-113750.0,ST-038,CB-01,AAPL,position
-Corporate Bond,-140000.0,ST-038,CB-02,MSFT,position
-Corporate Bond,-107188.0,ST-038,CB-03,DIS,position
-Corporate Bond,-72188.0,ST-038,CB-04,BA,position
-Corporate Bond,-65625.0,ST-038,CB-05,INTC,position
-Corporate Bond,-39375.0,ST-038,CB-06,PYPL,position
-Corporate Bond,-65625.0,ST-038,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-038,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-038,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-038,GB-03,US Treasury 30Y,position
-Corporate Loan,-54862.0,ST-038,LN-01,BA,position
-Corporate Loan,-44341.0,ST-038,LN-02,DIS,position
-Corporate Loan,-79319.0,ST-038,LN-03,Harbor Freight Lines,position
-Corporate Loan,-131141.0,ST-038,LN-04,Northgate Retail,position
-Corporate Loan,-97125.0,ST-038,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-038,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-038,IRS-02,Receive fixed 10Y,position
-FX Forward,-1400000.0,ST-038,FX-01,Long EUR / short USD,position
-FX Forward,-875000.0,ST-038,FX-02,Long JPY / short USD,position
-Credit Default Swap,59062.0,ST-038,CDS-01,BA,position
-Credit Default Swap,-157500.0,ST-038,CDS-02,CDX IG index,position
-Corporate Bond,0.0,ST-039,,,asset_class
-Corporate Loan,0.0,ST-039,,,asset_class
-Credit Default Swap,0.0,ST-039,,,asset_class
-Equity,-2800000.0,ST-039,,,asset_class
-FX Forward,0.0,ST-039,,,asset_class
-Government Bond,0.0,ST-039,,,asset_class
-Interest Rate Swap,0.0,ST-039,,,asset_class
-Equity,0.0,ST-039,EQ-01,AAPL,position
-Equity,0.0,ST-039,EQ-02,MSFT,position
-Equity,-2800000.0,ST-039,EQ-03,TSLA,position
-Equity,0.0,ST-039,EQ-04,DIS,position
-Equity,0.0,ST-039,EQ-05,BA,position
-Equity,0.0,ST-039,EQ-06,NFLX,position
-Corporate Bond,-0.0,ST-039,CB-01,AAPL,position
-Corporate Bond,-0.0,ST-039,CB-02,MSFT,position
-Corporate Bond,-0.0,ST-039,CB-03,DIS,position
-Corporate Bond,-0.0,ST-039,CB-04,BA,position
-Corporate Bond,-0.0,ST-039,CB-05,INTC,position
-Corporate Bond,-0.0,ST-039,CB-06,PYPL,position
-Corporate Bond,-0.0,ST-039,CB-07,Meridian Chemicals,position
-Government Bond,-0.0,ST-039,GB-01,US Treasury 2Y,position
-Government Bond,-0.0,ST-039,GB-02,US Treasury 10Y,position
-Government Bond,-0.0,ST-039,GB-03,US Treasury 30Y,position
-Corporate Loan,-0.0,ST-039,LN-01,BA,position
-Corporate Loan,-0.0,ST-039,LN-02,DIS,position
-Corporate Loan,-0.0,ST-039,LN-03,Harbor Freight Lines,position
-Corporate Loan,-0.0,ST-039,LN-04,Northgate Retail,position
-Corporate Loan,-0.0,ST-039,LN-05,Meridian Chemicals,position
-Interest Rate Swap,0.0,ST-039,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,-0.0,ST-039,IRS-02,Receive fixed 10Y,position
-FX Forward,-0.0,ST-039,FX-01,Long EUR / short USD,position
-FX Forward,-0.0,ST-039,FX-02,Long JPY / short USD,position
-Credit Default Swap,0.0,ST-039,CDS-01,BA,position
-Credit Default Swap,-0.0,ST-039,CDS-02,CDX IG index,position
-Corporate Bond,-3150000.0,ST-040,,,asset_class
-Corporate Loan,-3023781.0,ST-040,,,asset_class
-Credit Default Swap,-738281.0,ST-040,,,asset_class
-Equity,-3521875.0,ST-040,,,asset_class
-FX Forward,-1421875.0,ST-040,,,asset_class
-Government Bond,2628281.0,ST-040,,,asset_class
-Interest Rate Swap,65624.0,ST-040,,,asset_class
-Equity,-787500.0,ST-040,EQ-01,AAPL,position
-Equity,-721875.0,ST-040,EQ-02,MSFT,position
-Equity,-700000.0,ST-040,EQ-03,TSLA,position
-Equity,-481250.0,ST-040,EQ-04,DIS,position
-Equity,-490000.0,ST-040,EQ-05,BA,position
-Equity,-341250.0,ST-040,EQ-06,NFLX,position
-Corporate Bond,-568750.0,ST-040,CB-01,AAPL,position
-Corporate Bond,-700000.0,ST-040,CB-02,MSFT,position
-Corporate Bond,-535938.0,ST-040,CB-03,DIS,position
-Corporate Bond,-360937.0,ST-040,CB-04,BA,position
-Corporate Bond,-328125.0,ST-040,CB-05,INTC,position
-Corporate Bond,-196875.0,ST-040,CB-06,PYPL,position
-Corporate Bond,-459375.0,ST-040,CB-07,Meridian Chemicals,position
-Government Bond,249375.0,ST-040,GB-01,US Treasury 2Y,position
-Government Bond,1394531.0,ST-040,GB-02,US Treasury 10Y,position
-Government Bond,984375.0,ST-040,GB-03,US Treasury 30Y,position
-Corporate Loan,-405562.0,ST-040,LN-01,BA,position
-Corporate Loan,-331078.0,ST-040,LN-02,DIS,position
-Corporate Loan,-588000.0,ST-040,LN-03,Harbor Freight Lines,position
-Corporate Loan,-1016641.0,ST-040,LN-04,Northgate Retail,position
-Corporate Loan,-682500.0,ST-040,LN-05,Meridian Chemicals,position
-Interest Rate Swap,-492188.0,ST-040,IRS-01,Pay fixed 5Y (hedge),position
-Interest Rate Swap,557812.0,ST-040,IRS-02,Receive fixed 10Y,position
-FX Forward,-875000.0,ST-040,FX-01,Long EUR / short USD,position
-FX Forward,-546875.0,ST-040,FX-02,Long JPY / short USD,position
-Credit Default Swap,442969.0,ST-040,CDS-01,BA,position
-Credit Default Swap,-1181250.0,ST-040,CDS-02,CDX IG index,position

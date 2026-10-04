@@ -369,7 +369,7 @@ with tab_accuracy:
     st.markdown("Each part of the engine is tested on data it never saw during training.")
     rows = []
     if sent:
-        rows.append(["Sentiment (FinBERT)", f"{sent['n_samples']:,} labelled finance tweets",
+        rows.append(["Sentiment (fine-tuned FinBERT)", f"{sent['n_samples']:,} labelled finance tweets",
                      f"{sent['accuracy']:.1%} accuracy, macro-F1 {sent['macro_f1']:.2f}",
                      f"{sent['baseline_accuracy']:.1%} (always '{sent['baseline_majority_class']}')"])
     if events:

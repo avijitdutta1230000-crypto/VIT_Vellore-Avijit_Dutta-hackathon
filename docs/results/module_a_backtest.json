@@ -31,11 +31,11 @@
     "signal": "impact_weighted_sentiment"
   },
   "sentiment_tilted": {
-    "total_return": -0.3266,
-    "annual_return": -0.3288,
-    "annual_volatility": 0.3291,
-    "sharpe_ratio": -1.046,
-    "max_drawdown": -0.393
+    "total_return": -0.3193,
+    "annual_return": -0.3214,
+    "annual_volatility": 0.3328,
+    "sharpe_ratio": -0.998,
+    "max_drawdown": -0.3941
   },
   "equal_weight": {
     "total_return": -0.3207,
@@ -44,23 +44,23 @@
     "sharpe_ratio": -1.022,
     "max_drawdown": -0.3863
   },
-  "information_ratio": -0.749,
-  "avg_daily_turnover": 0.0367,
+  "information_ratio": 0.26,
+  "avg_daily_turnover": 0.038,
   "robustness_excess_annual_return": {
     "half-life 1d": {
-      "sensitivity 1": -0.0034,
-      "sensitivity 3": -0.01,
-      "sensitivity 5": -0.0183
-    },
-    "half-life 3d": {
-      "sensitivity 1": -0.002,
-      "sensitivity 3": -0.006,
+      "sensitivity 1": -0.0019,
+      "sensitivity 3": -0.0048,
       "sensitivity 5": -0.0096
     },
+    "half-life 3d": {
+      "sensitivity 1": 0.0005,
+      "sensitivity 3": 0.0014,
+      "sensitivity 5": 0.0023
+    },
     "half-life 7d": {
-      "sensitivity 1": -0.0016,
-      "sensitivity 3": -0.0049,
-      "sensitivity 5": -0.0082
+      "sensitivity 1": 0.0004,
+      "sensitivity 3": 0.001,
+      "sensitivity 5": 0.0015
     }
   }
 }

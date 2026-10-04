@@ -1,0 +1,57 @@
+{
+  "base_model": "ProsusAI/finbert",
+  "fine_tuned_on": "zeroshot/twitter-financial-news-sentiment train split (90% train, 10% dev for epoch selection)",
+  "tested_on": "zeroshot/twitter-financial-news-sentiment validation split (held out, used once)",
+  "n_train": 8588,
+  "n_dev": 955,
+  "n_test": 2388,
+  "settings": {
+    "learning_rate": 2e-05,
+    "epochs": 3,
+    "batch_size": 32,
+    "max_length": 96,
+    "seed": 42
+  },
+  "before": {
+    "accuracy": 0.7157,
+    "macro_f1": 0.6597,
+    "per_class": {
+      "positive": {
+        "precision": 0.592,
+        "recall": 0.602,
+        "f1": 0.597
+      },
+      "negative": {
+        "precision": 0.486,
+        "recall": 0.752,
+        "f1": 0.59
+      },
+      "neutral": {
+        "precision": 0.849,
+        "recall": 0.742,
+        "f1": 0.792
+      }
+    }
+  },
+  "after": {
+    "accuracy": 0.8802,
+    "macro_f1": 0.846,
+    "per_class": {
+      "positive": {
+        "precision": 0.825,
+        "recall": 0.821,
+        "f1": 0.823
+      },
+      "negative": {
+        "precision": 0.772,
+        "recall": 0.827,
+        "f1": 0.798
+      },
+      "neutral": {
+        "precision": 0.924,
+        "recall": 0.91,
+        "f1": 0.917
+      }
+    }
+  }
+}

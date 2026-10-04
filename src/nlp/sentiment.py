@@ -1,9 +1,15 @@
-"""Financial sentiment scoring with FinBERT (ProsusAI/finbert).
+"""Financial sentiment scoring with FinBERT, fine-tuned on finance tweets.
 
     sentiment = P(positive) - P(negative)   -> a number from -1.0 to 1.0
 
+The model is ProsusAI/finbert fine-tuned on the training split of
+zeroshot/twitter-financial-news-sentiment (notebooks/finetune_finbert.ipynb) and
+published on Hugging Face. The accuracy test uses the validation split, which the
+model never saw during training.
+
 Run from the repo root:
-    python -m src.nlp.sentiment            # accuracy test on 2,388 labeled finance tweets
+    python -m src.nlp.sentiment            # accuracy test of the fine-tuned model (2,388 held-out tweets)
+    python -m src.nlp.sentiment --base     # same test for the original FinBERT, for comparison
     python -m src.nlp.sentiment --score    # score all tweets + GDELT news (cached, resumable)
 """
 import argparse
@@ -15,12 +21,15 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
+from src.ingestion.common import clean_text
+
 ROOT = Path(__file__).resolve().parents[2]
 EVAL_CSV = ROOT / "data" / "tfns_validation.csv"
 CACHE_FILE = ROOT / "data" / "processed" / "sentiment.csv"
 RESULTS_FILE = ROOT / "docs" / "results" / "sentiment_eval.json"
 
-MODEL_NAME = "ProsusAI/finbert"
+BASE_MODEL = "ProsusAI/finbert"
+MODEL_NAME = "avijitdutta/riskpulse-finbert-tfns"   # fine-tuned FinBERT, hosted on Hugging Face
 MAX_LENGTH = 96     # tweets and headlines are short, so 96 tokens is plenty
 BATCH_SIZE = 32
 CHUNK_SIZE = 2000   # save progress to the cache every 2,000 texts
@@ -29,24 +38,23 @@ CHUNK_SIZE = 2000   # save progress to the cache every 2,000 texts
 TFNS_LABELS = {0: "negative", 1: "positive", 2: "neutral"}  # 0 Bearish, 1 Bullish, 2 Neutral
 CLASSES = ["negative", "neutral", "positive"]
 
-_model = None
-_tokenizer = None
+_loaded = {}
 
 
-def load_model():
-    """Load FinBERT once and reuse it (downloads ~440 MB the first time)."""
-    global _model, _tokenizer
-    if _model is None:
-        _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        _model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
-        _model.eval()
-    return _model, _tokenizer
+def load_model(name=MODEL_NAME):
+    """Load a model once and reuse it (downloads ~440 MB the first time)."""
+    if name not in _loaded:
+        tokenizer = AutoTokenizer.from_pretrained(name)
+        model = AutoModelForSequenceClassification.from_pretrained(name)
+        model.eval()
+        _loaded[name] = (model, tokenizer)
+    return _loaded[name]
 
 
-def score_texts(texts, batch_size=BATCH_SIZE, progress=True):
+def score_texts(texts, batch_size=BATCH_SIZE, progress=True, model_name=MODEL_NAME):
     """Score a list of texts. Returns a DataFrame (same order) with
     'sentiment' (-1.0 to 1.0) and 'sentiment_label' (positive / negative / neutral)."""
-    model, tokenizer = load_model()
+    model, tokenizer = load_model(model_name)
     id2label = {int(i): name.lower() for i, name in model.config.id2label.items()}
     pos_idx = next(i for i, n in id2label.items() if n == "positive")
     neg_idx = next(i for i, n in id2label.items() if n == "negative")
@@ -112,14 +120,15 @@ def classification_metrics(y_true, y_pred):
     return round(accuracy, 4), round(macro_f1, 4), per_class
 
 
-def evaluate():
-    """Test FinBERT on labeled finance tweets it was NOT trained on."""
+def evaluate(model_name=MODEL_NAME):
+    """Test a model on held-out labelled finance tweets it was NOT trained on."""
     df = pd.read_csv(EVAL_CSV)
+    df["text"] = df["text"].map(clean_text)   # same cleaning as the pipeline and the notebook
     y_true = df["label"].map(TFNS_LABELS)
-    print(f"Evaluating {MODEL_NAME} on {len(df):,} labeled tweets "
+    print(f"Evaluating {model_name} on {len(df):,} labeled tweets "
           f"(zeroshot/twitter-financial-news-sentiment, validation split)")
 
-    pred = score_texts(df["text"].tolist())
+    pred = score_texts(df["text"].tolist(), model_name=model_name)
     accuracy, macro_f1, per_class = classification_metrics(y_true, pred["sentiment_label"])
 
     # Naive baseline: always predict the most common label.
@@ -139,9 +148,10 @@ def evaluate():
     for r in wrong.head(5).itertuples():
         print(f"  actual={r.actual:<8} predicted={r.predicted:<8} {r.text[:90]}")
 
-    RESULTS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    results_file = RESULTS_FILE if model_name == MODEL_NAME else RESULTS_FILE.with_name("sentiment_eval_base.json")
+    results_file.parent.mkdir(parents=True, exist_ok=True)
     results = {
-        "model": MODEL_NAME,
+        "model": model_name,
         "dataset": "zeroshot/twitter-financial-news-sentiment (validation)",
         "n_samples": int(len(df)),
         "accuracy": accuracy,
@@ -150,8 +160,8 @@ def evaluate():
         "baseline_accuracy": baseline_acc,
         "per_class": per_class,
     }
-    RESULTS_FILE.write_text(json.dumps(results, indent=2))
-    print(f"\nSaved results to {RESULTS_FILE}")
+    results_file.write_text(json.dumps(results, indent=2))
+    print(f"\nSaved results to {results_file}")
 
 
 def score_all():
@@ -172,5 +182,9 @@ def score_all():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="FinBERT sentiment scoring")
     parser.add_argument("--score", action="store_true", help="score all tweets + GDELT news")
+    parser.add_argument("--base", action="store_true", help="test the original FinBERT instead")
     args = parser.parse_args()
-    score_all() if args.score else evaluate()
+    if args.score:
+        score_all()
+    else:
+        evaluate(BASE_MODEL if args.base else MODEL_NAME)
