@@ -109,7 +109,8 @@ for r in top.itertuples():
 st.markdown("".join(rows), unsafe_allow_html=True)
 st.caption("The square is the impact score (1-10). Amber marks high impact (7 or more).")
 
-tab_weights, tab_signals, tab_accuracy = st.tabs(["Index weights", "Signals", "How well it works"])
+tab_weights, tab_stress, tab_signals, tab_accuracy = st.tabs(
+    ["Index weights", "Stress test", "Signals", "How well it works"])
 
 # ------------------------------------------------------------------ Module A
 
@@ -135,7 +136,7 @@ with tab_weights:
                                       labelExpr="date(datum.value) <= 7 ? timeFormat(datum.value, '%b %Y') : ''")),
                 y=alt.Y("ticker:N", sort=stock_order, title=None),
                 color=alt.Color("mean(tilt):Q", title="Tilt", legend=alt.Legend(format="+.0%"),
-                                scale=alt.Scale(domain=[-0.025, 0, 0.025], range=[NEGATIVE, PANEL, POSITIVE],
+                                scale=alt.Scale(domain=[-0.04, 0, 0.04], range=[NEGATIVE, PANEL, POSITIVE],
                                                 clamp=True, interpolate="rgb")),
                 tooltip=[alt.Tooltip("yearweek(date):O", title="Week of", format="%d %b %Y"), "ticker:N",
                          alt.Tooltip("mean(weight):Q", title="Average weight", format=".1%"),
@@ -227,6 +228,104 @@ with tab_weights:
             st.altair_chart(bars, width="stretch")
             st.caption("Stocks with no news sit slightly below equal weight only because the weights "
                        "must add up to 100% after others were raised.")
+
+# ------------------------------------------------------------------ Module B
+
+with tab_stress:
+    portfolio = load_csv("module_b/portfolio.csv")
+    tests = load_csv("module_b/stress_events.csv")
+    detail = load_csv("module_b/stress_detail.csv")
+    what_if = load_csv("module_b/what_if.csv")
+    if portfolio is None or tests is None:
+        missing("python -m src.modules.stress_test")
+    else:
+        total = portfolio["value"].sum()
+        st.markdown(f"A synthetic wholesale banking book of {len(portfolio)} positions "
+                    f"(${total / 1e6:,.0f}m). When the engine flags a high-impact event (7 or more), "
+                    "the matching shock scenario is applied and the book is revalued.")
+
+        live_tests = tests[tests["source"] == "gdelt"] if len(tests) else tests
+        if len(live_tests):
+            worst_live = live_tests.sort_values("pnl").iloc[0]
+            st.warning(f"Latest news triggered {len(live_tests)} stress test(s). Worst: "
+                       f"{worst_live['scenario']} on {worst_live['signal_date']}, "
+                       f"{worst_live['pnl'] / 1e6:+,.1f}m ({worst_live['pnl_pct']:+.2%}).")
+
+        left, right = st.columns(2)
+        with left:
+            st.markdown("**What the book holds**")
+            comp = portfolio.groupby("asset_class", as_index=False)["value"].sum()
+            comp = comp[comp["value"] > 0]
+            st.altair_chart(alt.Chart(comp).mark_bar(color=INK).encode(
+                x=alt.X("value:Q", title="Invested ($)", axis=alt.Axis(format="~s", tickCount=6)),
+                y=alt.Y("asset_class:N", sort="-x", title=None),
+                tooltip=["asset_class:N", alt.Tooltip("value:Q", format="$,.0f")],
+            ).properties(height=200), width="stretch")
+            st.caption(f"Plus ${portfolio['notional'].sum() / 1e6:,.0f}m notional in swaps, "
+                       "FX forwards and credit default swaps.")
+        with right:
+            if what_if is not None:
+                st.markdown("**What each market scenario would cost today**")
+                wi = what_if.pivot(index="scenario", columns="impact", values="pnl_pct")
+                wi.columns = [f"Impact {c}" for c in wi.columns]
+                st.dataframe(wi.map(lambda v: f"{v:+.1%}"), width="stretch")
+                st.caption("Rate shocks hurt most: two thirds of the book is bonds and loans, "
+                           "so interest-rate risk is its biggest vulnerability.")
+
+        if tests.empty:
+            st.info("No high-impact events have triggered a stress test yet.")
+        else:
+            st.markdown("**Pick a triggered stress test**")
+            labels = [f"{r.signal_date}  [{r.impact}]  {r.scenario}  {r.pnl / 1e6:+,.1f}m"
+                      for r in tests.itertuples()]
+            choice = st.selectbox("Stress test", range(len(tests)), format_func=lambda i: labels[i],
+                                  label_visibility="collapsed")
+            t = tests.iloc[choice]
+            headline = t["headline"] if not isinstance(t["url"], str) else \
+                f'<a href="{t["url"]}" target="_blank">{t["headline"]}</a>'
+            st.markdown(
+                f'<div class="feed-row"><div class="impact" style="background:{impact_color(t["impact"])}">'
+                f'{t["impact"]}</div><div><div class="feed-text">{headline}</div>'
+                f'<div class="feed-meta">{t["trigger_ticker"]}, {t["event_type"]}, {t["signal_date"]}. '
+                f'Scenario: {t["story"]}.</div></div></div>', unsafe_allow_html=True)
+
+            m1, m2, m3 = st.columns(3)
+            m1.metric("Value before", f"${t['value_before'] / 1e6:,.1f}m")
+            m2.metric("Value after", f"${t['value_after'] / 1e6:,.1f}m",
+                      delta=f"{t['pnl'] / 1e6:+,.1f}m ({t['pnl_pct']:+.2%})")
+            m3.metric("Hardest-hit position", t["worst_position"].split(" (")[0],
+                      delta=f"{t['worst_position_pnl'] / 1e6:+,.1f}m")
+
+            if detail is not None:
+                d = detail[detail["test_id"] == t["test_id"]]
+                by_class = d[d["level"] == "asset_class"]
+                by_pos = d[(d["level"] == "position") & (d["pnl"] != 0)]
+                c1, c2 = st.columns(2)
+                with c1:
+                    st.markdown("**Profit and loss by asset class**")
+                    st.altair_chart(alt.Chart(by_class).mark_bar().encode(
+                        x=alt.X("pnl:Q", title="P&L ($)", axis=alt.Axis(format="~s", tickCount=6)),
+                        y=alt.Y("asset_class:N", sort="x", title=None),
+                        color=alt.condition("datum.pnl >= 0", alt.value(POSITIVE), alt.value(NEGATIVE)),
+                        tooltip=["asset_class:N", alt.Tooltip("pnl:Q", format="$,.0f")],
+                    ).properties(height=260), width="stretch")
+                    st.caption("Green bars are hedges that gained, such as credit protection "
+                               "bought or government bonds in a flight to safety.")
+                with c2:
+                    st.markdown("**Positions hit**")
+                    show = by_pos.sort_values("pnl")[["position_id", "asset_class", "issuer", "pnl"]]
+                    st.dataframe(show, width="stretch", hide_index=True, height=290, column_config={
+                        "position_id": "Position", "asset_class": "Type", "issuer": "Issuer",
+                        "pnl": st.column_config.NumberColumn("P&L ($)", format="%,.0f")})
+
+            st.markdown("**Every stress test the engine has triggered**")
+            table = tests[["signal_date", "impact", "scenario", "headline", "pnl", "pnl_pct", "source"]]
+            st.dataframe(table, width="stretch", hide_index=True, height=300, column_config={
+                "signal_date": "Date", "impact": "Impact", "scenario": "Scenario", "headline": "Trigger",
+                "pnl": st.column_config.NumberColumn("P&L ($)", format="%,.0f"),
+                "pnl_pct": st.column_config.NumberColumn("P&L (%)", format="percent"),
+                "source": "Source"})
+
 
 # ------------------------------------------------------------------ signals explorer
 

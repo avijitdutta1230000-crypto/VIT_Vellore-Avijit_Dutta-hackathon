@@ -1,0 +1,28 @@
+position_id,asset_class,issuer,rating,value,notional,duration,beta,direction,currency
+EQ-01,Equity,AAPL,AA,15000000.0,0.0,0.0,1.2,1,USD
+EQ-02,Equity,MSFT,AAA,15000000.0,0.0,0.0,1.1,1,USD
+EQ-03,Equity,TSLA,BBB,8000000.0,0.0,0.0,2.0,1,USD
+EQ-04,Equity,DIS,A,10000000.0,0.0,0.0,1.1,1,USD
+EQ-05,Equity,BA,BBB,8000000.0,0.0,0.0,1.4,1,USD
+EQ-06,Equity,NFLX,BBB,6000000.0,0.0,0.0,1.3,1,USD
+CB-01,Corporate Bond,AAPL,AA,40000000.0,0.0,6.5,0.0,1,USD
+CB-02,Corporate Bond,MSFT,AAA,40000000.0,0.0,8.0,0.0,1,USD
+CB-03,Corporate Bond,DIS,A,35000000.0,0.0,7.0,0.0,1,USD
+CB-04,Corporate Bond,BA,BBB,30000000.0,0.0,5.5,0.0,1,USD
+CB-05,Corporate Bond,INTC,A,25000000.0,0.0,6.0,0.0,1,USD
+CB-06,Corporate Bond,PYPL,A,20000000.0,0.0,4.5,0.0,1,USD
+CB-07,Corporate Bond,Meridian Chemicals,B,15000000.0,0.0,4.0,0.0,1,USD
+GB-01,Government Bond,US Treasury 2Y,AAA,120000000.0,0.0,1.9,0.0,1,USD
+GB-02,Government Bond,US Treasury 10Y,AAA,150000000.0,0.0,8.5,0.0,1,USD
+GB-03,Government Bond,US Treasury 30Y,AAA,50000000.0,0.0,18.0,0.0,1,USD
+LN-01,Corporate Loan,BA,BBB,60000000.0,0.0,2.0,0.0,1,USD
+LN-02,Corporate Loan,DIS,A,50000000.0,0.0,2.0,0.0,1,USD
+LN-03,Corporate Loan,Harbor Freight Lines,BBB,70000000.0,0.0,2.5,0.0,1,USD
+LN-04,Corporate Loan,Northgate Retail,BB,55000000.0,0.0,2.0,0.0,1,USD
+LN-05,Corporate Loan,Meridian Chemicals,B,40000000.0,0.0,1.5,0.0,1,USD
+IRS-01,Interest Rate Swap,Pay fixed 5Y (hedge),AA,0.0,100000000.0,4.5,0.0,1,USD
+IRS-02,Interest Rate Swap,Receive fixed 10Y,AA,0.0,60000000.0,8.5,0.0,-1,USD
+FX-01,FX Forward,Long EUR / short USD,A,0.0,40000000.0,0.0,0.0,1,EUR
+FX-02,FX Forward,Long JPY / short USD,A,0.0,25000000.0,0.0,0.0,1,JPY
+CDS-01,Credit Default Swap,BA,BBB,0.0,30000000.0,4.5,0.0,1,USD
+CDS-02,Credit Default Swap,CDX IG index,A,0.0,80000000.0,4.5,0.0,-1,USD

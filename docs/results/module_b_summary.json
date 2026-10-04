@@ -1,0 +1,53 @@
+{
+  "portfolio_value": 862000000.0,
+  "positions": 27,
+  "impact_threshold": 7,
+  "tests_triggered": 39,
+  "company_events_without_exposure": 14,
+  "worst_test": {
+    "test_id": "ST-001",
+    "signal_date": "2022-07-20",
+    "scenario": "Market: Macroeconomic",
+    "pnl": -49308467,
+    "pnl_pct": -0.0572,
+    "headline": "Netflix, $NFLX: The US dollar continues to strengthen meaningfully against most currencies at a historic pace, a significant headwind for all multinational US companies. We have high exposure to this unprecedented appreciation in the USD."
+  },
+  "what_if": [
+    {
+      "scenario": "Geopolitical",
+      "impact": 8,
+      "pnl": -20941500,
+      "pnl_pct": -0.02429
+    },
+    {
+      "scenario": "Geopolitical",
+      "impact": 10,
+      "pnl": -26176876,
+      "pnl_pct": -0.03037
+    },
+    {
+      "scenario": "Macroeconomic",
+      "impact": 8,
+      "pnl": -87659500,
+      "pnl_pct": -0.10169
+    },
+    {
+      "scenario": "Macroeconomic",
+      "impact": 10,
+      "pnl": -109574375,
+      "pnl_pct": -0.12712
+    },
+    {
+      "scenario": "Credit Event",
+      "impact": 8,
+      "pnl": -14668000,
+      "pnl_pct": -0.01702
+    },
+    {
+      "scenario": "Credit Event",
+      "impact": 10,
+      "pnl": -18335000,
+      "pnl_pct": -0.02127
+    }
+  ]
+}
