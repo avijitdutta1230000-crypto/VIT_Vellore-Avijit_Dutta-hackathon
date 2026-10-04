@@ -2,15 +2,15 @@
   "portfolio_value": 862000000.0,
   "positions": 27,
   "impact_threshold": 7,
-  "tests_triggered": 39,
+  "tests_triggered": 40,
   "company_events_without_exposure": 14,
   "worst_test": {
-    "test_id": "ST-001",
-    "signal_date": "2022-07-20",
-    "scenario": "Market: Macroeconomic",
-    "pnl": -49308467,
-    "pnl_pct": -0.0572,
-    "headline": "Netflix, $NFLX: The US dollar continues to strengthen meaningfully against most currencies at a historic pace, a significant headwind for all multinational US companies. We have high exposure to this unprecedented appreciation in the USD."
+    "test_id": "ST-007",
+    "signal_date": "2022-04-20",
+    "scenario": "Market: Rate shock",
+    "pnl": -43829751,
+    "pnl_pct": -0.05085,
+    "headline": "People are ending their subscriptions services to cut out on essential spending. Stagflation is killing the consumer. Recession on the way! $NFLX"
   },
   "what_if": [
     {
@@ -26,25 +26,49 @@
       "pnl_pct": -0.03037
     },
     {
-      "scenario": "Macroeconomic",
+      "scenario": "Rate shock",
       "impact": 8,
       "pnl": -87659500,
       "pnl_pct": -0.10169
     },
     {
-      "scenario": "Macroeconomic",
+      "scenario": "Rate shock",
       "impact": 10,
       "pnl": -109574375,
       "pnl_pct": -0.12712
     },
     {
-      "scenario": "Credit Event",
+      "scenario": "Currency shock",
+      "impact": 8,
+      "pnl": -10149800,
+      "pnl_pct": -0.01177
+    },
+    {
+      "scenario": "Currency shock",
+      "impact": 10,
+      "pnl": -12687251,
+      "pnl_pct": -0.01472
+    },
+    {
+      "scenario": "Commodity shock",
+      "impact": 8,
+      "pnl": -48619600,
+      "pnl_pct": -0.0564
+    },
+    {
+      "scenario": "Commodity shock",
+      "impact": 10,
+      "pnl": -60774500,
+      "pnl_pct": -0.0705
+    },
+    {
+      "scenario": "Credit crunch",
       "impact": 8,
       "pnl": -14668000,
       "pnl_pct": -0.01702
     },
     {
-      "scenario": "Credit Event",
+      "scenario": "Credit crunch",
       "impact": 10,
       "pnl": -18335000,
       "pnl_pct": -0.02127

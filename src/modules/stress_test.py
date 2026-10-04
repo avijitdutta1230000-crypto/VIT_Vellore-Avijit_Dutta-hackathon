@@ -4,7 +4,8 @@ Subscribes to the Risk Engine's event type + impact score. When a high-impact ev
 arrives (impact >= 7), it picks a shock scenario and revalues the portfolio:
 
   Market-wide events (ticker MARKET, or Geopolitical / Macroeconomic news)
-      -> a market scenario: equities, interest rates, credit spreads, USD, default risk
+      -> a market scenario: geopolitical risk-off, rate shock, currency shock,
+         commodity shock or credit crunch (macro news is split by its finer topic)
          (at half strength when the news is about one company, e.g. "Netflix hit by strong dollar")
   Company events with negative sentiment (e.g. a credit or legal shock at Disney)
       -> an issuer scenario: only positions linked to that company are hit
@@ -55,13 +56,23 @@ MARKET_SCENARIOS = {
     "Geopolitical": {"equity": -0.10, "rates": -0.0025, "ig_spread": 0.0075, "hy_spread": 0.0200,
                      "usd": 0.05, "pd_multiplier": 1.5,
                      "story": "Risk-off: stocks fall, investors flee to safe government bonds, USD rises"},
-    "Macroeconomic": {"equity": -0.05, "rates": 0.0200, "ig_spread": 0.0025, "hy_spread": 0.0075,
-                      "usd": 0.03, "pd_multiplier": 1.25,
-                      "story": "Rate shock: yields jump 2%, bond prices fall, stocks dip"},
-    "Credit Event": {"equity": -0.07, "rates": -0.0050, "ig_spread": 0.0100, "hy_spread": 0.0300,
-                     "usd": 0.02, "pd_multiplier": 2.0,
-                     "story": "Credit crunch: spreads blow out, default risk doubles"},
+    "Rate shock": {"equity": -0.05, "rates": 0.0200, "ig_spread": 0.0025, "hy_spread": 0.0075,
+                   "usd": 0.03, "pd_multiplier": 1.25,
+                   "story": "Rate shock: yields jump 2%, bond prices fall, stocks dip"},
+    "Currency shock": {"equity": -0.03, "rates": 0.0, "ig_spread": 0.0010, "hy_spread": 0.0025,
+                       "usd": 0.08, "pd_multiplier": 1.1,
+                       "story": "Dollar surge: USD +8%, foreign-currency positions and multinational earnings hit"},
+    "Commodity shock": {"equity": -0.04, "rates": 0.0100, "ig_spread": 0.0025, "hy_spread": 0.0075,
+                        "usd": 0.02, "pd_multiplier": 1.2,
+                        "story": "Commodity spike: inflation fears push yields up 1%, stocks fall"},
+    "Credit crunch": {"equity": -0.07, "rates": -0.0050, "ig_spread": 0.0100, "hy_spread": 0.0300,
+                      "usd": 0.02, "pd_multiplier": 2.0,
+                      "story": "Credit crunch: spreads blow out, default risk doubles"},
 }
+# Macroeconomic news is split by its finer topic, so a dollar story gets a currency
+# shock rather than a rate shock.
+MACRO_TOPIC_SCENARIO = {"Currencies": "Currency shock", "Energy | Oil": "Commodity shock",
+                        "Gold | Metals | Materials": "Commodity shock"}
 # Issuer scenarios (impact 8): only positions on that company are hit.
 ISSUER_SCENARIOS = {
     "credit": {"equity": -0.20, "spread": 0.0300, "pd_multiplier": 4.0,
@@ -154,21 +165,37 @@ def revalue(portfolio, shocks):
     return p
 
 
+def market_scenario_key(event, topic):
+    """Which market scenario a market-wide event maps to (None if it isn't one)."""
+    if event == "Geopolitical":
+        return "Geopolitical"
+    if event == "Macroeconomic":
+        return MACRO_TOPIC_SCENARIO.get(topic, "Rate shock")
+    if event in CREDIT_LIKE:
+        return "Credit crunch"
+    return None
+
+
+def market_shocks(key, severity):
+    """Scale a market scenario's shocks by severity (1.0 = an impact-8 event)."""
+    base = MARKET_SCENARIOS[key]
+    shocks = {k: v * severity for k, v in base.items() if k not in ("pd_multiplier", "story")}
+    shocks["pd_multiplier"] = 1 + (base["pd_multiplier"] - 1) * severity
+    return shocks
+
+
 def scenario_for(signal):
     """Pick and scale the shocks for one triggering signal. Returns None if it isn't a stress event."""
     severity = signal["impact"] / CALIBRATION_IMPACT
     event, ticker = signal["event_type"], signal["ticker"]
 
     if ticker == "MARKET" or event in ("Geopolitical", "Macroeconomic"):
-        base = MARKET_SCENARIOS.get(event) or (MARKET_SCENARIOS["Credit Event"] if event in CREDIT_LIKE else None)
-        if base is None:
+        key = market_scenario_key(event, signal.get("topic"))
+        if key is None:
             return None
-        name = f"Market: {event}"
         if ticker != "MARKET":
             severity *= SPILLOVER_SEVERITY
-        shocks = {k: v * severity for k, v in base.items() if k not in ("pd_multiplier", "story")}
-        shocks["pd_multiplier"] = 1 + (base["pd_multiplier"] - 1) * severity
-        return name, base["story"], shocks
+        return f"Market: {key}", MARKET_SCENARIOS[key]["story"], market_shocks(key, severity)
 
     if signal["sentiment"] > ISSUER_SENTIMENT_TRIGGER:
         return None  # positive or neutral company news is not a stress event
@@ -245,12 +272,10 @@ def run_stress_tests(signals, portfolio):
 def what_if_table(portfolio):
     """Portfolio P&L for each market scenario at impact 8 and 10 (no news needed)."""
     rows = []
-    for event in MARKET_SCENARIOS:
+    for key in MARKET_SCENARIOS:
         for impact in (8, 10):
-            fake = {"impact": impact, "event_type": event, "ticker": "MARKET", "sentiment": -1}
-            _, _, shocks = scenario_for(fake)
-            change = float(revalue(portfolio, shocks)["value_change"].sum())
-            rows.append({"scenario": event, "impact": impact, "pnl": round(change),
+            change = float(revalue(portfolio, market_shocks(key, impact / CALIBRATION_IMPACT))["value_change"].sum())
+            rows.append({"scenario": key, "impact": impact, "pnl": round(change),
                          "pnl_pct": round(change / portfolio["value"].sum(), 5)})
     return pd.DataFrame(rows)
 
