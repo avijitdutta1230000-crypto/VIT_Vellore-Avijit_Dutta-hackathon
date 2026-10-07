@@ -3,7 +3,7 @@
 **Candidate Name:** Avijit Dutta
 **College Email ID:** [avijit.dutta2023@vitstudent.ac.in]
 **College / Campus:** Vellore Institute of Technology (VIT), Vellore
-**Demo Video Link:** [YouTube unlisted link]
+**Demo Video Link:** https://youtu.be/aWnb6T-Iylw?si=fU-6tEKxq3PZbe0h
 **Slide Deck Link (if hosted externally):** Not hosted externally, see [docs/presentation.pdf](docs/presentation.pdf)
 
 ---
